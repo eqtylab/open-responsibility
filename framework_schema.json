@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "framework": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stageName": {
+                "type": "string"
+              },
+              "systemComponents": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "componentName": {
+                      "type": "string"
+                    },
+                    "risks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "riskId": {
+                            "type": "string",
+                            "pattern": "^[0-9]+\\.[0-9]+$"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "definition": {
+                            "type": "string"
+                          },
+                          "addressedByControls": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "pattern": "^[A-Z]+-[0-9]+$"
+                            }
+                          }
+                        },
+                        "required": ["riskId", "title", "definition", "addressedByControls"]
+                      }
+                    }
+                  },
+                  "required": ["componentName", "risks"]
+                }
+              }
+            },
+            "required": ["stageName", "systemComponents"]
+          }
+        }
+      },
+      "required": ["name", "description", "stages"]
+    }
+  },
+  "required": ["framework"]
+}
