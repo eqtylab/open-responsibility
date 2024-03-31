@@ -1,7 +1,10 @@
 ---
 license: apache-2.0
 
-data_files:
+configs:
+- config_name: default
+  data_files:
   - split: train
-    path: "catalog.json"
+    path:
+    - "catalog.json"
 ---
