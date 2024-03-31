@@ -1,0 +1,556 @@
+{
+  "framework": {
+    "name": "Databricks AI Security Framework (DASF)",
+    "description": "The Databricks AI Security Framework (DASF) is a comprehensive guide developed by the Databricks Security team to help organizations understand and mitigate the evolving security risks associated with the widespread integration of artificial intelligence (AI) systems. Unlike approaches that focus solely on securing models or endpoints, the DASF adopts a holistic strategy to address cyber risks across all components of an AI system. The framework is designed to facilitate collaboration between business, IT, data, AI, and security teams throughout the AI lifecycle. It provides actionable defensive control recommendations that can be updated as new risks emerge and additional controls become available. The DASF walks readers through the 12 foundational components of a generic data-centric AI system, detailing 55 identified technical security risks and dedicated controls to mitigate those risks. It also includes a guide on how to manage and deploy AI models safely and securely using the Databricks Data Intelligence Platform. The framework aims to be a valuable resource for security teams, ML practitioners, and governance officers to gain insights into AI system security, apply security engineering principles to ML, and access a detailed guide for understanding the security and compliance of specific ML systems.",
+    "stages": [
+      {
+        "stageName": "Data Operations",
+        "systemComponents": [
+          {
+            "componentName": "Raw Data",
+            "risks": [
+              {
+                "riskId": "1.1",
+                "title": "Insufficient access controls",
+                "definition": "Effective access management is fundamental to data security, ensuring only authorized individuals or groups can access specific datasets. Such security protocols encompass authentication, authorization and finely tuned access controls tailored to the scope of access required by each user, down to the file or record level. Establishing definitive governance policies for data access is imperative in response to the heightened risks from data breaches and regulations like the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). These policies guard against unauthorized use and are a cornerstone of preserving data integrity and maintaining customer trust.",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-5", "DASF-51"]
+              },
+              {
+                "riskId": "1.2",
+                "title": "Missing data classification",
+                "definition": "Data classification is critical for data governance, enabling organizations to effectively sort and categorize data by sensitivity, importance and criticality. As data volumes grow exponentially, prioritizing sensitive information protection, risk reduction and data quality becomes imperative. Classification facilitates the implementation of appropriate security measures and governance policies by evaluating data’s risk and value. A robust classification strategy strengthens data governance, mitigates risks, and ensures data integrity and security on a scalable level.",
+                "addressedByControls": ["DASF-6"]
+              },
+              {
+                "riskId": "1.3",
+                "title": "Poor data quality",
+                "definition": "Data quality is crucial for reliable data-driven decisions and is a cornerstone of data governance. Malicious actors threaten data integrity, accuracy and consistency, challenging the analytics and decision-making processes that depend on high-quality data, just as a well-intentioned user with poor-quality data can limit the efficacy of an AI system. To safeguard against these threats, organizations must rigorously evaluate key data attributes — accuracy, completeness, freshness and rule compliance. Prioritizing data quality enables organizations to trace data lineage, apply data quality rules and monitor changes, ensuring analytical accuracy and cost-effectiveness.",
+                "addressedByControls": ["DASF-7", "DASF-21", "DASF-36"]
+              },
+              {
+                "riskId": "1.4",
+                "title": "Ineffective storage and encryption",
+                "definition": "Insecure data storage leaves organizations vulnerable to unauthorized access, potentially leading to data breaches with significant legal, financial and reputational consequences. Encrypting data at rest can help to render the data unreadable to unauthorized actors who bypass security measures or attempt largescale data exfiltration. Additionally, compliance with industry-specific data security regulations often necessitates such measures.",
+                "addressedByControls": ["DASF-8", "DASF-9", "DASF-5"]
+              },
+              {
+                "riskId": "1.5",
+                "title": "Lack of data versioning",
+                "definition": "When data gets corrupted by a malicious user by introducing a new set of data or by corrupting a data pipeline, you will need to be able to roll back or trace back to the original data.",
+                "addressedByControls": ["DASF-10"]
+              },
+              {
+                "riskId": "1.6",
+                "title": "Insufficient data lineage",
+                "definition": "Because data may come from multiple sources and go through multiple transformations over its lifecycle, understanding data transparency and usage requirements in AI training is important to risk management. Many compliance regulations require organizations to have a clear understanding and traceability of data used for AI. Data lineage helps organizations be compliant and audit-ready, thereby alleviating the operational overhead of manually creating the trails of data flows for audit reporting purposes.",
+                "addressedByControls": ["DASF-11", "DASF-51"]
+              },
+              {
+                "riskId": "1.7",
+                "title": "Lack of data trustworthiness",
+                "definition": "Attackers may tamper with or poison raw input data (training data, RAG data, etc). Adversaries may exploit public datasets, which often resemble those used by targeted organizations. To mitigate these threats, organizations should validate data sources, implement integrity checks, and utilize AI and machine learning for anomaly detection.",
+                "addressedByControls": ["DASF-10", "DASF-54"]
+              },
+              {
+                "riskId": "1.8",
+                "title": "Data legal",
+                "definition": "Intellectual property concerns of training data and and legal mandates — such as those from GDPR, CCPA and LGPD — necessitate the capability of machine learning systems to “delete” specific data. But you often can’t “untrain” a model; during the training process, input data is encoded into the internal representation of the model, characterized by elements like thresholds and weights, which could become subject to legal constraints. Tracking your training data and retraining your model using clean and ownership-verified datasets is essential for meeting regulatory demands.",
+                "addressedByControls": ["DASF-12", "DASF-29", "DASF-27"]
+              },
+              {
+                "riskId": "1.9",
+                "title": "Stale data",
+                "definition": "When downstream data is not timely or accurate, business processes can be delayed, significantly affecting overall efficiency. Attackers may deliberately target these systems with attacks like denial of service, which can undermine the model’s performance and dependability. It’s crucial to proactively counteract these threats. Data streaming and performance monitoring help protect against such risks, maintaining the input data integrity and ensuring they are delivered promptly to the model.",
+                "addressedByControls": ["DASF-13", "DASF-7"]
+              },
+              {
+                "riskId": "1.10",
+                "title": "Lack of data access logs",
+                "definition": "Without proper audit mechanisms, an organization may not be fully aware of its risk surface area, leaving it vulnerable to data breaches and regulatory noncompliance. Therefore, a well-designed audit team within a data governance or security governance organization is critical in ensuring data security and compliance with regulations such as GDPR and CCPA. By implementing effective data access auditing strategies, organizations can maintain the trust of their customers and protect their data from unauthorized access or misuse.",
+                "addressedByControls": ["DASF-14"]
+              }
+            ]
+          },
+          {
+            "componentName": "Data Prep",
+            "risks": [
+              {
+                "riskId": "2.1",
+                "title": "Preprocessing integrity",
+                "definition": "Preprocessing includes numerical transformations, data aggregation, text or image data encoding, and new feature creation, followed by combining data by joining tables or merging datasets. Data preparation involves cleaning and formatting tasks such as handling missing values, ensuring correct formats and removing unnecessary columns. Insiders or external actors can introduce errors or manipulate data during preprocessing or from the information repository itself.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-7",
+                  "DASF-11",
+                  "DASF-15",
+                  "DASF-52",
+                  "DASF-16",
+                  "DASF-42"
+                ]
+              },
+              {
+                "riskId": "2.2",
+                "title": "Feature manipulation",
+                "definition": "In almost all cases, raw data requires preprocessing and transformation before it is used to build a model. This process, known as feature engineering, involves converting raw data into structured features, the building blocks of the model. Feature engineering is critical to quality and effectiveness of the model. However, how data are annotated into features can introduce the risk of incorporating attacker biases into an AI/ML system. This can compromise the integrity and accuracy of the model and is a significant security concern for models used in critical decision-making (e.g., financial forecasting, fraud detection).",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-16", "DASF-42"]
+              },
+              {
+                "riskId": "2.3",
+                "title": "Raw data criteria",
+                "definition": "An attacker who understands raw data selection criteria may be able to introduce malicious input that compromises system integrity or functionality later in the model lifecycle. Exploitation of this knowledge allows the attacker to bypass established security measures and manipulate the system’s output or behavior. Implementing stringent security measures to safeguard against such manipulations is essential for maintaining the integrity and reliability of ML systems.",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-43", "DASF-42"]
+              },
+              {
+                "riskId": "2.4",
+                "title": "Adversarial partitions",
+                "definition": "If an attacker can influence the partitioning of datasets used in training and evaluation, they can effectively exercise indirect control over the ML system by making them vulnerable to adversarial attacks, where carefully crafted inputs lead to incorrect outputs. These attacks can exploit the space partitioning capabilities of machine learning models, such as tree ensembles and neural networks, leading to misclassifications even in high-confidence scenarios. This form of “model control” can lead to biased or compromised outcomes. Therefore, it is crucial that datasets accurately reflect the intended operational reality of the ML system. Implementing stringent security measures to safeguard against such manipulations is essential for maintaining the integrity and reliability of ML systems.",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-17", "DASF-42"]
+              }
+            ]
+          },
+          {
+            "componentName": "Datasets",
+            "risks": [
+              {
+                "riskId": "3.1",
+                "title": "Data poisoning",
+                "definition": "Attackers can compromise an ML system by contaminating its training data to manipulate its output at the inference stage. All three initial components of a typical ML system — raw data, data preparation and datasets — are susceptible to poisoning attacks. Intentionally manipulated data, possibly coordinated across these components, derail the ML training process and create an unreliable model. Practitioners must assess the potential extent of training data an attacker might control internally and externally and the resultant risks.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-7",
+                  "DASF-11",
+                  "DASF-16",
+                  "DASF-17",
+                  "DASF-51",
+                  "DASF-14"
+                ]
+              },
+              {
+                "riskId": "3.2",
+                "title": "Ineffective storage and encryption",
+                "definition": "Data stored and managed insecurely pose significant risks, especially for ML systems. It’s crucial to consider who has access to training datasets and the reasons behind this access. While access controls are a vital mitigation strategy, their effectiveness is limited with public data sources, where traditional security measures may not apply. Therefore, it’s essential to ask: What are the implications if an attacker gains access and control over your data sources? Understanding and preparing for this scenario is critical for safeguarding the integrity of ML systems.",
+                "addressedByControls": ["DASF-8", "DASF-9", "DASF-5"]
+              },
+              {
+                "riskId": "3.3",
+                "title": "Label flipping",
+                "definition": "Label-flipping attacks are a distinctive type of data poisoning where the attacker manipulates the labels of a fraction of the training data. In these attacks, the attacker changes the labels of specific training points, which can mislead the ML model during training. Even with constrained capabilities, these attacks have been shown to significantly degrade the system’s performance, demonstrating their potential to compromise the accuracy and reliability of ML models.",
+                "addressedByControls": ["DASF-8", "DASF-9", "DASF-5"]
+              }
+            ]
+          },
+          {
+            "componentName": "Governance",
+            "risks": [
+              {
+                "riskId": "4.1",
+                "title": "Lack of traceability and",
+                "definition": "transparency of model assets The absence of traceability in data, model assets and models and the lack of accountable human oversight pose significant risks in machine learning systems. This lack of traceability can: Undermine the supportability and adoption of these systems, as it hampers the ability to maintain and update them effectively Impact trust and transparency, which are essential for users to understand and rely on the system’s decisions Limit the organization’s ability to meet regulatory, compliance and legal obligations, as these often require clear documentation and tracking of data and model-related processes",
+                "addressedByControls": ["DASF-5", "DASF-7", "DASF-11", "DASF-16", "DASF-17", "DASF-18"]
+              },
+              {
+                "riskId": "4.2",
+                "title": "Lack of end-to-end ML lifecycle",
+                "definition": "Continuously measure, track and analyze key metrics, such as performance, accuracy and user engagement, to ensure the AI system’s reliability. Demonstrating consistent performance builds trustworthiness among users, customers and regulators.",
+                "addressedByControls": ["DASF-19", "DASF-42", "DASF-21"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stageName": "Model Opertions",
+        "systemComponents": [
+          {
+            "componentName": "Algorithms",
+            "risks": [
+              {
+                "riskId": "5.1",
+                "title": "Lack of tracking and reproducibility",
+                "definition": "of experiments ML development is often poorly documented and tracked, and results that cannot be reproduced may lead to overconfidence in an ML system’s performance. Common issues include: Critical details missing from a model’s description Results that are fragile, producing dramatically different results on a different GPU (even one that is supposed to be spec-identical) Extensive tweaks to the authors’ system until it outperforms the untweaked “baseline,” resulting in asserted improvements that aren’t borne out in practice (particularly common in academic work) Additionally, adversaries may gain initial access to a system by compromising the unique portions of the ML supply chain. This could include the model itself, training data or its annotations, parts of the ML software stack, or even GPU hardware. In some instances, the attacker will need secondary access to fully carry out an attack using compromised supply chain components.",
+                "addressedByControls": ["DASF-20", "DASF-42"]
+              },
+              {
+                "riskId": "5.2",
+                "title": "Model drift",
+                "definition": "Model drift in machine learning systems can occur due to changes in feature data or target dependencies. This drift can be broadly classified into three scenarios: Concept drift: where the statistical properties of the target variable change over time Data drift: involving changes in the distribution of input data Upstream data changes: occur due to alterations in data collection or processing methods before the data reaches the model Clever attackers can exploit these scenarios to evade an ML system for adversarial purposes.",
+                "addressedByControls": ["DASF-17", "DASF-16", "DASF-21"]
+              },
+              {
+                "riskId": "5.3",
+                "title": "Hyperparameters stealing",
+                "definition": "Hyperparameters in machine learning are often deemed confidential due to their commercial value and role in proprietary learning processes. If attackers gain access to these hyperparameters, they may steal or manipulate them — altering, concealing or even adding hyperparameters. Such unauthorized interventions can harm the ML system, compromising performance and reliability or revealing sensitive algorithmic strategies.",
+                "addressedByControls": ["DASF-20", "DASF-43", "DASF-42"]
+              },
+              {
+                "riskId": "5.4",
+                "title": "Malicious libraries",
+                "definition": "Attackers can upload malicious libraries to public repositories that have the potential to compromise systems, data and models. Administrators should manage and restrict the installation and usage of third-party libraries, safeguarding systems, pipelines and data. This risk may also manifest in 2.2 Data Prep in exploratory data analysis (EDA).",
+                "addressedByControls": ["DASF-53"]
+              }
+            ]
+          },
+          {
+            "componentName": "Evaluation",
+            "risks": [
+              {
+                "riskId": "6.1",
+                "title": "Evaluation data poisoning",
+                "definition": "Upstream attacks against data, where the data is tampered with before it is used for machine learning, significantly complicate the training and evaluation of ML models. Poisoning of the evaluation data impacts the model validation and testing process. These attacks can corrupt or alter the data in a way that skews the training process, leading to unreliable models.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-7",
+                  "DASF-11",
+                  "DASF-45",
+                  "DASF-44",
+                  "DASF-49",
+                  "DASF-42"
+                ]
+              },
+              {
+                "riskId": "6.2",
+                "title": "Insufficient evaluation data",
+                "definition": "Evaluation datasets can also be too small or too similar to the training data to be useful. Poor evaluation data can lead to biases, hallucinations and toxic output. It is difficult to effectively evaluate large language models (LLMs), as these models rarely have an objective ground truth labeled. Consequently, organizations frequently struggle to determine the trustworthiness of these models in critical, unsupervised use cases, given the uncertainties in their evaluation.",
+                "addressedByControls": ["DASF-22", "DASF-25", "DASF-47", "DASF-45"]
+              }
+            ]
+          },
+          {
+            "componentName": "Models",
+            "risks": [
+              {
+                "riskId": "7.1",
+                "title": "Backdoor machine learning/",
+                "definition": "Trojaned model There are inherent risks when using public ML/ LLM models or outsourcing their training, akin to the dangers associated with executable (.exe) files. A malicious third party handling the training process could tamper with the data or deliver a “Trojan model” that intentionally misclassifies specific inputs. Additionally, open source models may contain hidden malicious code that can exfiltrate sensitive data upon deployment. These risks are pertinent in both external models and outsourced model development scenarios, necessitating scrutiny and verification of models before use.",
+                "addressedByControls": ["DASF-1", "DASF-43", "DASF-42", "DASF-23", "DASF-19", "DASF-5", "DASF-34"]
+              },
+              {
+                "riskId": "7.2",
+                "title": "Model assets leak",
+                "definition": "Adversaries may target ML artifacts for exfiltration or as a basis for staging ML attacks. These artifacts encompass models, datasets and metadata generated during interactions with a model. Additionally, insiders risk leaking critical model assets like notebooks, features, model files, plots and metrics. Such leaks can expose trade secrets and sensitive organizational information, underlining the need for stringent security measures to protect these valuable assets.",
+                "addressedByControls": ["DASF-24", "DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-5", "DASF-42", "DASF-33"]
+              },
+              {
+                "riskId": "7.3",
+                "title": "ML Supply chain vulnerabilities",
+                "definition": "Due to the extensive data, skills and computational resources required to train machine learning algorithms, it’s common practice to reuse and slightly modify models developed by large corporations. For example, ResNet, a popular image recognition model from Microsoft, is often adapted for customerspecific tasks. These models are curated in a Model Zoo (Caffe hosts popular image recognition models) or hosted by third-party ML SaaS (OpenAI LLMs are an example). In this attack, the adversary attacks the models hosted in Caffe, thereby poisoning the well for anyone else. Adversaries can also host specialized models that will receive less scrutiny, akin to watering hole attacks.",
+                "addressedByControls": ["DASF-22", "DASF-47", "DASF-48", "DASF-53", "DASF-42", "DASF-45"]
+              },
+              {
+                "riskId": "7.4",
+                "title": "Source code control attack",
+                "definition": "The attacker might modify the source code used in the ML algorithm, such as the random number generator or any third-party libraries, which are often open source.",
+                "addressedByControls": ["DASF-52", "DASF-53"]
+              }
+            ]
+          },
+          {
+            "componentName": "Model Management",
+            "risks": [
+              {
+                "riskId": "8.1",
+                "title": "Model attribution",
+                "definition": "Inadequate governance in machine learning, including a lack of robust access controls, unclear model classification and insufficient documentation, can lead to the improper use or sharing of models. This risk is particularly acute when transferring models outside their designed purpose. To mitigate these risks, groups that post models must provide precise descriptions of their intended use and document how they address potential risks.",
+                "addressedByControls": ["DASF-5", "DASF-28", "DASF-29", "DASF-51"]
+              },
+              {
+                "riskId": "8.2",
+                "title": "Model theft",
+                "definition": "Training machine learning systems, particularly large language models, involves considerable investment. A significant risk is the potential theft of a system’s knowledge through direct observation of their input and output observations, akin to reverse engineering. This can lead to unauthorized access, copying or exfiltration of proprietary models, resulting in economic losses, eroded competitive advantage and exposure of sensitive information. This attack can be as simple as attackers making legitimate queries and analyzing the responses to recreate a model. Once replicated, the model can be inverted, enabling the attackers to extract feature information or infer details about the training data.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-51",
+                  "DASF-32",
+                  "DASF-33"
+                ]
+              },
+              {
+                "riskId": "8.3",
+                "title": "Model lifecycle without HITL",
+                "definition": "(human-in-the-loop) Lack of sufficient controls in a machine learning and systems development lifecycle can result in the unintended deployment of incorrect or unapproved models to production. Implementing model lifecycle tracking within an MLOps framework is advisable to mitigate this risk. This approach should include human oversight, ensuring permissions, version control and proper approvals are in place before models are promoted to production. Such measures are crucial for maintaining ML system integrity, reliability and security.",
+                "addressedByControls": ["DASF-5", "DASF-24", "DASF-28", "DASF-29", "DASF-42"]
+              },
+              {
+                "riskId": "8.4",
+                "title": "Model inversion",
+                "definition": "In machine learning models, private assets like training data, features and hyperparameters, which are typically confidential, can potentially be recovered by attackers through a process known as model inversion. This technique involves reconstructing private elements without direct access, compromising the model’s security. Model inversion falls under the “Functional Extraction” category in the MITRE ATLAS framework, highlighting its relevance as a significant security threat.",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-5", "DASF-24", "DASF-30", "DASF-31", "DASF-32"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stageName": "Model Deployment and Serving",
+        "systemComponents": [
+          {
+            "componentName": "Model Serving — Inference Requests",
+            "risks": [
+              {
+                "riskId": "9.1",
+                "title": "Prompt inject",
+                "definition": "A direct prompt injection occurs when a user injects text that is intended to alter the behavior of the LLM. Malicious input, known as model evasion in the MITRE ATLAS framework, is a significant threat to machine learning systems. These risks manifest as “adversarial examples”: inputs deliberately designed to deceive models. Attackers use direct prompt injections to bypass safeguards in order to create misinformation and cause reputational damage. Attackers may wish to extract the system prompt or reveal private information provided to the model in the context but not intended for unfiltered access by the user. Large language model (LLM) plug-ins are particularly vulnerable, as they are typically required to handle untrusted input and it is difficult to apply adequate application control. Attackers can exploit such vulnerabilities, with severe potential outcomes including remote code execution.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-46",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37"
+                ]
+              },
+              {
+                "riskId": "9.2",
+                "title": "Model inversion",
+                "definition": "Malicious actors can recover the private assets used in machine learning models, known as functional extraction in the MITRE ATLAS framework. This process includes reconstructing private training data, features and hyperparameters the attacker cannot otherwise access. The attacker can also recover a functionally equivalent model by iteratively querying the model.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-46",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37"
+                ]
+              },
+              {
+                "riskId": "9.3",
+                "title": "Model breakout",
+                "definition": "Malicious users can exploit adversarial examples to mislead machine learning systems, including large language models (LLMs). These specially crafted inputs aim to disrupt the normal functioning of these systems, leading to several potential hazards. An attacker might use these examples to force the system to deviate from its intended environment, exfiltrate sensitive data or interact inappropriately with other systems. Additionally, adversarial inputs can cause false predictions, leak sensitive information from the training data, or manipulate the system into executing unintended actions on internal and external systems.",
+                "addressedByControls": ["DASF-34", "DASF-37"]
+              },
+              {
+                "riskId": "9.4",
+                "title": "Looped input",
+                "definition": "There is a notable risk in machine learning systems when the output produced by the system is reintroduced into the real world and subsequently cycles back as input, creating a harmful feedback loop. This can reinforce removing security filters, biases or errors, potentially leading to increasingly skewed or inaccurate model performance and unintended system behaviors.",
+                "addressedByControls": ["DASF-37"]
+              },
+              {
+                "riskId": "9.5",
+                "title": "Infer training data membership",
+                "definition": "Adversaries may pose a significant privacy threat to machine learning systems by simulating or inferring whether specific data samples were part of a model’s training set. Such inferences can be made by: Using techniques like Train Proxy via Replication to create and host shadow models replicating the target model’s behavior Analyzing the statistical patterns in the model’s prediction scores to conclude the training data These methods can lead to the unintended leakage of sensitive information, such as individuals’ personally identifiable information (PII) in the training dataset or other forms of protected intellectual property.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-28",
+                  "DASF-46",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37",
+                  "DASF-45"
+                ]
+              },
+              {
+                "riskId": "9.6",
+                "title": "Discover ML model ontology",
+                "definition": "Adversaries may aim to uncover the ontology of a machine learning model’s output space, such as identifying the range of objects or responses the model is designed to detect. This can be achieved through repeated queries to the model, which may force it to reveal its classification system or by accessing its configuration files or documentation. Understanding a model’s ontology allows adversaries to gain insights in designing targeted attacks that exploit specific vulnerabilities or characteristics.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-28",
+                  "DASF-46",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37",
+                  "DASF-45"
+                ]
+              },
+              {
+                "riskId": "9.7",
+                "title": "Denial of service (DoS)",
+                "definition": "Adversaries may target machine learning systems with a flood of requests to degrade or shut down the service. Since many machine learning systems require significant amounts of specialized compute, they are often expensive bottlenecks that can become overloaded. Adversaries can intentionally craft inputs that require heavy amounts of useless compute from the machine learning system.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-46",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37"
+                ]
+              },
+              {
+                "riskId": "9.8",
+                "title": "LLM hallucinations",
+                "definition": "Large language models (LLMs) are known to inadvertently generate incorrect, misleading or factually false outputs, or leak sensitive data. This situation may arise when training models on datasets containing potential biases in their training data, limitations in contextual understanding or confidential information.",
+                "addressedByControls": ["DASF-25", "DASF-26", "DASF-27", "DASF-46", "DASF-49"]
+              },
+              {
+                "riskId": "9.9",
+                "title": "Input resource control",
+                "definition": "The attacker might modify or exfiltrate resources (e.g., documents, web pages) that will be ingested by the GenAI model at runtime via the RAG process. This capability is used for indirect prompt injection attacks. For example, rows from a database or text from a PDF document that are intended to be summarized generically by the LLM can be extracted by simply asking for them via direct prompt injection.",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-5", "DASF-46"]
+              },
+              {
+                "riskId": "9.10",
+                "title": "Accidental exposure of",
+                "definition": "unauthorized data to models In GenAI, large language models (LLMs) are also becoming an integral part of the infrastructure and software applications. LLMs are being used to create more powerful online search, help software developers write code, and even power chatbots that help with customer service. LLMs are being integrated with corporate databases and documents to enable powerful retrieval augmented generation (RAG) scenarios when LLMs are adapted to specific domains and use cases. For example: rows from a database or text from a PDF document that are intended to be summarized generically by the LLM. These scenarios in effect expose a new attack surface to potentially confidential and proprietary enterprise data that is not sufficiently secured or overprivileged, which can lead to use of unauthorized data as an input source to models. A similar risk exists for tabular data models that rely upon lookups to feature store tables at inference time.",
+                "addressedByControls": ["DASF-1", "DASF-2", "DASF-3", "DASF-4", "DASF-5", "DASF-16", "DASF-46"]
+              }
+            ]
+          },
+          {
+            "componentName": "Model Serving — Inference Requests",
+            "risks": [
+              {
+                "riskId": "10.1",
+                "title": "Lack of audit and monitoring",
+                "definition": "inference quality Effectively audit, track and assess the performance of machine learning models by monitoring inference tables to gain valuable insights into the model’s decision-making process and identify any discrepancies or anomalies. These tables should include the model’s user or system making the request, inputs, and the corresponding predictions or outputs. Monitoring the model serving endpoints provides real-time audit in operational settings.",
+                "addressedByControls": ["DASF-35", "DASF-36", "DASF-37"]
+              },
+              {
+                "riskId": "10.2",
+                "title": "Output manipulation",
+                "definition": "An attacker can compromise a machine learning system by tweaking its output stream, also known as a man-in-the-middle attack. This is achieved by intercepting the data transmission between the model’s endpoint, which generates its predictions or outputs, and the intended receiver of this information. Such an attack poses a severe security threat, allowing the attacker to read or alter the communicated results, potentially leading to data leakage, misinformation or misguided actions based on manipulated data.",
+                "addressedByControls": ["DASF-30", "DASF-31", "DASF-32"]
+              },
+              {
+                "riskId": "10.3",
+                "title": "Discover ML model ontology",
+                "definition": "Adversaries may aim to uncover the ontology of a machine learning model’s output space, such as identifying the range of objects or responses the model is designed to detect. This can be achieved through repeated queries to the model, which may force it to reveal its classification system or by accessing its configuration files or documentation. Understanding a model’s ontology allows adversaries to gain insights in designing targeted attacks that exploit specific vulnerabilities or characteristics.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-28",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37"
+                ]
+              },
+              {
+                "riskId": "10.4",
+                "title": "Discover ML model family",
+                "definition": "Adversaries targeting machine learning systems may strive to identify the general family or type of the model in use. Attackers can obtain this information from documentation that describes the model or through analyzing responses from carefully constructed inputs. Knowledge of the model’s family is crucial for crafting attacks tailored to exploit the identified weaknesses of the model.",
+                "addressedByControls": [
+                  "DASF-1",
+                  "DASF-2",
+                  "DASF-3",
+                  "DASF-4",
+                  "DASF-5",
+                  "DASF-24",
+                  "DASF-28",
+                  "DASF-46",
+                  "DASF-30",
+                  "DASF-31",
+                  "DASF-32",
+                  "DASF-37",
+                  "DASF-45"
+                ]
+              },
+              {
+                "riskId": "10.5",
+                "title": "Black-box attacks",
+                "definition": "Public or compromised private model serving connectors (e.g., API interfaces) are vulnerable to black-box attacks. Although black-box attacks generally require more trial-and-error attempts (inferences), they are notable for requiring significantly less access to the target system. Successful black-box attacks quickly erode trust in enterprises serving the model connectors.",
+                "addressedByControls": ["DASF-30", "DASF-31", "DASF-32"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stageName": "Operations and Platform",
+        "systemComponents": [
+          {
+            "componentName": "Machine Learning Operations (MLOps)",
+            "risks": [
+              {
+                "riskId": "11.1",
+                "title": "Lack of MLOps — repeatable",
+                "definition": "enforced standards Operationalizing an ML solution requires joining data from predictions, monitoring and feature tables with other relevant data. Duplicating data, moving AI assets, and driving governance and tracking across these stages may represent roadblocks to practitioners who would rather shortcut security controls to deliver their solution. Many organizations will find that the simplest way to securely combine ML solutions, input data and feature tables is to leverage the same platform that manages other production data. An ML solution comprises data, code and models. These assets must be developed, tested (staging) and deployed (production). For each of these stages, we also need to operate within an execution environment. Security is an essential component of all MLOps lifecycle stages. It ensures the complete lifecycle meets the required standards by keeping the distinct execution environments — development, staging and production.",
+                "addressedByControls": ["DASF-45", "DASF-44", "DASF-42"]
+              }
+            ]
+          },
+          {
+            "componentName": "Data and AI Platform Security",
+            "risks": [
+              {
+                "riskId": "12.1",
+                "title": "Lack of vulnerability management",
+                "definition": "Detecting and promptly addressing software vulnerabilities in systems that support data and AI/ML operations is a critical responsibility for software and service providers. Attackers do not necessarily need to target AI/ML algorithms directly; compromising the layers underlying AI/ ML systems is often easier. Therefore, adhering to traditional security threat mitigation practices, such as a secure software development lifecycle, is essential across all software layers.",
+                "addressedByControls": ["DASF-38"]
+              },
+              {
+                "riskId": "12.2",
+                "title": "Lack of penetration testing",
+                "definition": "and bug bounty Penetration testing and bug bounty programs are vital in securing software that supports data and AI/ML operations. Unlike in direct attacks on AI/ML algorithms, adversaries often target underlying software risks, such as the OWASP Top 10. These foundational software layers are generally more prone to attacks than the AI/ML components. Penetration testing involves skilled experts actively seeking and exploiting weaknesses, mimicking real attack scenarios. Bug bounty programs encourage external ethical hackers to find and report vulnerabilities, rewarding them for their discoveries. This combination of internal and external security testing enhances overall system protection, safeguarding the integrity of AI/ML infrastructures against cyberthreats.",
+                "addressedByControls": ["DASF-39"]
+              },
+              {
+                "riskId": "12.3",
+                "title": "Lack of incident response",
+                "definition": "AI/ML applications are mission-critical for business. Your chosen platform vendor must address security issues in machine learning operations quickly and effectively. The program should combine automated monitoring with manual analysis to address general and ML-specific threats.",
+                "addressedByControls": ["DASF-39"]
+              },
+              {
+                "riskId": "12.4",
+                "title": "Unauthorized privileged access",
+                "definition": "A significant security threat in machine learning platforms arises from malicious internal actors, such as employees or contractors. These individuals might gain unauthorized access to private training data or ML models, posing a grave risk to the integrity and confidentiality of the assets. Such unauthorized access can lead to data breaches, leakage of sensitive or proprietary information, business process abuses, and potential sabotage of the ML systems. Implementing stringent internal security measures and monitoring protocols is critical to mitigate insider risks from the platform vendor.",
+                "addressedByControls": ["DASF-40"]
+              },
+              {
+                "riskId": "12.5",
+                "title": "Poor security in the software",
+                "definition": "development lifecycle Software platform security is an important part of any progressive security program. ML hackers have shown that they don’t need to know sophisticated AI/ ML concepts to compromise a system. Hackers have busied themselves with exposing and exploiting bugs in a platform where AI is built, as those systems are well known to them. The security of AI depends on the platform’s security.",
+                "addressedByControls": ["DASF-41"]
+              },
+              {
+                "riskId": "12.6",
+                "title": "Lack of compliance",
+                "definition": "As AI applications become prevalent, they are increasingly subject to scrutiny and regulations, such as the General Data Protection Regulation (GDPR) in the European Union and the California Consumer Privacy Act (CCPA) in the United States. Navigating these regulations can be complex, particularly regarding data privacy and user rights. Utilizing a compliance-certified platform can be a significant advantage for organizations. These platforms are specifically designed to meet regulatory standards, providing essential tools and resources to help organizations build and deploy AI applications that are compliant with these laws. By leveraging such platforms, organizations can more effectively address regulatory compliance challenges, ensuring their AI initiatives align with legal requirements and best practices for data protection.",
+                "addressedByControls": ["DASF-50"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

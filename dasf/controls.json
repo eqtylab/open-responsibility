@@ -1,0 +1,2135 @@
+[
+  {
+    "controlId": "DASF-1",
+    "title": "SSO with IdP and MFA",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.1",
+        "riskId": "raw-data-1.1",
+        "summary": "Raw Data Risk 1.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.2",
+        "riskId": "data-prep-2.2",
+        "summary": "Data Prep Risk 2.2"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.3",
+        "riskId": "data-prep-2.3",
+        "summary": "Data Prep Risk 2.3"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.4",
+        "riskId": "data-prep-2.4",
+        "summary": "Data Prep Risk 2.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.9",
+        "riskId": "model-serving-inference-requests-9.9",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.9"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Implementing single sign-on with an identity provider\u2019s (IdP) multi-factor authentication is critical for secure authentication. It adds an extra layer of security, ensuring that only authorized users access the Databricks Platform.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 1"
+  },
+  {
+    "controlId": "DASF-2",
+    "title": "Sync users and groups",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.1",
+        "riskId": "raw-data-1.1",
+        "summary": "Raw Data Risk 1.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.2",
+        "riskId": "data-prep-2.2",
+        "summary": "Data Prep Risk 2.2"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.3",
+        "riskId": "data-prep-2.3",
+        "summary": "Data Prep Risk 2.3"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.4",
+        "riskId": "data-prep-2.4",
+        "summary": "Data Prep Risk 2.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.9",
+        "riskId": "model-serving-inference-requests-9.9",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.9"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Synchronizing users and groups from your identity provider (IdP) with Databricks using the SCIM standard facilitates consistent and automated user provisioning for enhancing security.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 2"
+  },
+  {
+    "controlId": "DASF-3",
+    "title": "Restrict access using IP access lists",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.1",
+        "riskId": "raw-data-1.1",
+        "summary": "Raw Data Risk 1.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.2",
+        "riskId": "data-prep-2.2",
+        "summary": "Data Prep Risk 2.2"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.3",
+        "riskId": "data-prep-2.3",
+        "summary": "Data Prep Risk 2.3"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.4",
+        "riskId": "data-prep-2.4",
+        "summary": "Data Prep Risk 2.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.9",
+        "riskId": "model-serving-inference-requests-9.9",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.9"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Configure IP access lists to restrict authentication to Databricks from specific IP ranges, such as VPNs or office networks, and strengthen network security by preventing unauthorized access from untrusted locations.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 3"
+  },
+  {
+    "controlId": "DASF-4",
+    "title": "Restrict access using private link",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.1",
+        "riskId": "raw-data-1.1",
+        "summary": "Raw Data Risk 1.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.2",
+        "riskId": "data-prep-2.2",
+        "summary": "Data Prep Risk 2.2"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.3",
+        "riskId": "data-prep-2.3",
+        "summary": "Data Prep Risk 2.3"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.4",
+        "riskId": "data-prep-2.4",
+        "summary": "Data Prep Risk 2.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.9",
+        "riskId": "model-serving-inference-requests-9.9",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.9"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Use AWS PrivateLink, Azure Private Link or GCP Private Service Connect to create a private network route between the customer and the Databricks control plane or the control plane and the customer\u2019s compute plane environments to enhance data security by avoiding public internet exposure.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 4"
+  },
+  {
+    "controlId": "DASF-5",
+    "title": "Control access to data and other objects",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.1",
+        "riskId": "raw-data-1.1",
+        "summary": "Raw Data Risk 1.1"
+      },
+      {
+        "component": "Raw Data",
+        "identifier": "1.4",
+        "riskId": "raw-data-1.4",
+        "summary": "Raw Data Risk 1.4"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.2",
+        "riskId": "datasets-3.2",
+        "summary": "Datasets Risk 3.2"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.3",
+        "riskId": "datasets-3.3",
+        "summary": "Datasets Risk 3.3"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.1",
+        "riskId": "governance-4.1",
+        "summary": "Governance Risk 4.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.1",
+        "riskId": "model-management-8.1",
+        "summary": "Model Management Risk 8.1"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.3",
+        "riskId": "model-management-8.3",
+        "summary": "Model Management Risk 8.3"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.9",
+        "riskId": "model-serving-inference-requests-9.9",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.9"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Implementing Unity Catalog for unified permissions management and assets simplifies access control and enhances security.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 5"
+  },
+  {
+    "controlId": "DASF-6",
+    "title": "Classify data",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.2",
+        "riskId": "raw-data-1.2",
+        "summary": "Raw Data Risk 1.2"
+      }
+    ],
+    "description": "Tags are attributes containing keys and optional values that you can apply to different securable objects in Unity Catalog. Organizing securable objects with tags in Unity Catalog aids in efficient data management, data discovery and classification, essential for handling large datasets.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 6"
+  },
+  {
+    "controlId": "DASF-7",
+    "title": "Enforce Data Quality Checks on Batch and Streaming Datasets",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.3",
+        "riskId": "raw-data-1.3",
+        "summary": "Raw Data Risk 1.3"
+      },
+      {
+        "component": "Raw Data",
+        "identifier": "1.9",
+        "riskId": "raw-data-1.9",
+        "summary": "Raw Data Risk 1.9"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.1",
+        "riskId": "governance-4.1",
+        "summary": "Governance Risk 4.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      }
+    ],
+    "description": "Databricks Delta Live Tables (DLT) simplifies ETL development with declarative pipelines that integrate quality control checks and performance monitoring.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 7"
+  },
+  {
+    "controlId": "DASF-8",
+    "title": "Encrypt data at rest",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.4",
+        "riskId": "raw-data-1.4",
+        "summary": "Raw Data Risk 1.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.2",
+        "riskId": "datasets-3.2",
+        "summary": "Datasets Risk 3.2"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.3",
+        "riskId": "datasets-3.3",
+        "summary": "Datasets Risk 3.3"
+      }
+    ],
+    "description": "Databricks supports customer-managed encryption keys to strengthen data at rest protection and greater access control.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 8"
+  },
+  {
+    "controlId": "DASF-9",
+    "title": "Encrypt data in transit",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.4",
+        "riskId": "raw-data-1.4",
+        "summary": "Raw Data Risk 1.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.2",
+        "riskId": "datasets-3.2",
+        "summary": "Datasets Risk 3.2"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.3",
+        "riskId": "datasets-3.3",
+        "summary": "Datasets Risk 3.3"
+      }
+    ],
+    "description": "Databricks supports TLS 1.2+ encryption to protect customer data during transit. This applies to data transfer between the customer and the Databricks control plane and within the compute plane. Customers can also secure inter-cluster communications within the compute plane per their security requirements.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 9"
+  },
+  {
+    "controlId": "DASF-10",
+    "title": "Version data",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.5",
+        "riskId": "raw-data-1.5",
+        "summary": "Raw Data Risk 1.5"
+      },
+      {
+        "component": "Raw Data",
+        "identifier": "1.7",
+        "riskId": "raw-data-1.7",
+        "summary": "Raw Data Risk 1.7"
+      }
+    ],
+    "description": "Store data in a lakehouse architecture using Delta tables. Delta tables can be versioned to revert any user\u2019s or malicious actor\u2019s poisoning of data. Data can be stored in a lakehouse architecture in the customer\u2019s cloud account. Both raw data and feature tables are stored as Delta tables with access controls to determine who can read and modify them. Data lineage with UC helps track and audit changes and the origin of ML data sources. Each operation that modifies a Delta Lake table creates a new table version. User actions are tracked and audited, and lineage of transformations is available all in the same platform. You can use history information to audit operations, roll back a table or query a table at a specific point in time using time travel.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 10"
+  },
+  {
+    "controlId": "DASF-11",
+    "title": "Capture and view data lineage",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.6",
+        "riskId": "raw-data-1.6",
+        "summary": "Raw Data Risk 1.6"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.1",
+        "riskId": "governance-4.1",
+        "summary": "Governance Risk 4.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      }
+    ],
+    "description": "Unity Catalog tracks and visualizes real-time data lineage across all languages to the column level, providing a traceable history of an object from notebooks, workflows, models and dashboards. This enhances transparency and compliance, with accessibility provided through the Catalog Explorer.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 11"
+  },
+  {
+    "controlId": "DASF-12",
+    "title": "Delete records from datasets",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.8",
+        "riskId": "raw-data-1.8",
+        "summary": "Raw Data Risk 1.8"
+      }
+    ],
+    "description": "Data governance in Delta Lake, the lakehouse storage layer, utilizes its atomicity, consistency, isolation, durability (ACID) properties for effective data management. This includes the capability to remove data based on specific predicates from a Delta Table, including the complete removal of data\u2019s history, supporting compliance with regulations like GDPR and CCPA.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 12"
+  },
+  {
+    "controlId": "DASF-13",
+    "title": "Use near real-time data",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.9",
+        "riskId": "raw-data-1.9",
+        "summary": "Raw Data Risk 1.9"
+      }
+    ],
+    "description": "Use Databricks for near real-time data ingestion, processing, machine learning, and AI for streaming data.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 13"
+  },
+  {
+    "controlId": "DASF-14",
+    "title": "Audit actions performed on datasets",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.10",
+        "riskId": "raw-data-1.10",
+        "summary": "Raw Data Risk 1.10"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      }
+    ],
+    "description": "Databricks auditing, enhanced by Unity Catalog\u2019s events, delivers fine-grained visibility into data access and user activities. This is vital for robust data governance and security, especially in regulated industries. It enables organizations to proactively identify and manage overentitled users, enhancing data security and ensuring compliance.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 14"
+  },
+  {
+    "controlId": "DASF-15",
+    "title": "Explore datasets and identify problems",
+    "risks": [
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      }
+    ],
+    "description": "Iteratively explore, share and prep data for the machine learning lifecycle by creating reproducible, editable and shareable datasets, tables and visualizations. Within Databricks this EDA process can be accelerated with Mosaic AI AutoML. AutoML not only generates baseline models given a dataset, but also provides the underlying model training code in the form of a Python notebook. Notably for EDA, AutoML calculates summary statistics on the provided dataset, creating a notebook for the data scientist to review and adapt.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 15"
+  },
+  {
+    "controlId": "DASF-16",
+    "title": "Secure model features",
+    "risks": [
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.2",
+        "riskId": "data-prep-2.2",
+        "summary": "Data Prep Risk 2.2"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.1",
+        "riskId": "governance-4.1",
+        "summary": "Governance Risk 4.1"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.2",
+        "riskId": "algorithms-5.2",
+        "summary": "Algorithms Risk 5.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      }
+    ],
+    "description": "Databricks Feature Store is a centralized repository that enables data scientists to find and share features and also ensures that the same code used to compute the feature values is used for model training and inference. Unity Catalog\u2019s capabilities, such as security, lineage, table history, tagging and cross-workspace access, are automatically available to the feature table to reduce the risk of malicious actors manipulating the features that feed into ML training.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 16"
+  },
+  {
+    "controlId": "DASF-17",
+    "title": "Track and reproduce the training data used for ML model training",
+    "risks": [
+      {
+        "component": "Data Prep",
+        "identifier": "2.4",
+        "riskId": "data-prep-2.4",
+        "summary": "Data Prep Risk 2.4"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.1",
+        "riskId": "governance-4.1",
+        "summary": "Governance Risk 4.1"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.2",
+        "riskId": "algorithms-5.2",
+        "summary": "Algorithms Risk 5.2"
+      }
+    ],
+    "description": "MLflow with Delta Lake tracks the training data used for ML model training. It also enables the identification of specific ML models and runs derived from particular datasets for regulatory and auditable attribution.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 17"
+  },
+  {
+    "controlId": "DASF-18",
+    "title": "Govern model assets",
+    "risks": [
+      {
+        "component": "Governance",
+        "identifier": "4.1",
+        "riskId": "governance-4.1",
+        "summary": "Governance Risk 4.1"
+      }
+    ],
+    "description": "With Unity Catalog, organizations can implement a unified governance framework for their structured and unstructured data, machine learning models, notebooks, features, functions, and files, enhancing security and compliance across clouds and platforms.",
+    "controlCategory": "Configuration",
+    "readableControlId": "DASF 18"
+  },
+  {
+    "controlId": "DASF-19",
+    "title": "Manage end-to-end machine learning lifecycle",
+    "risks": [
+      {
+        "component": "Governance",
+        "identifier": "4.2",
+        "riskId": "governance-4.2",
+        "summary": "Governance Risk 4.2"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      }
+    ],
+    "description": "Databricks includes a managed version of MLflow featuring enterprise security controls and high availability. It supports functionalities like experiments, run management and notebook revision capture. MLflow on Databricks allows tracking and measuring machine learning model training runs, logging model training artifacts and securing machine learning projects.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 19"
+  },
+  {
+    "controlId": "DASF-20",
+    "title": "Track ML training runs",
+    "risks": [
+      {
+        "component": "Algorithms",
+        "identifier": "5.1",
+        "riskId": "algorithms-5.1",
+        "summary": "Algorithms Risk 5.1"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.3",
+        "riskId": "algorithms-5.3",
+        "summary": "Algorithms Risk 5.3"
+      }
+    ],
+    "description": "MLflow tracking facilitates the automated recording and retrieval of experiment details, including algorithms, code, datasets, parameters, configurations, signatures and artifacts.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 20"
+  },
+  {
+    "controlId": "DASF-21",
+    "title": "Monitor data and AI system from a single pane of glass",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.3",
+        "riskId": "raw-data-1.3",
+        "summary": "Raw Data Risk 1.3"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.2",
+        "riskId": "governance-4.2",
+        "summary": "Governance Risk 4.2"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.2",
+        "riskId": "algorithms-5.2",
+        "summary": "Algorithms Risk 5.2"
+      }
+    ],
+    "description": "Databricks Lakehouse Monitoring offers a single pane of glass to centrally track tables\u2019 data quality and statistical properties and automatically classifies data. It can also track the performance of machine learning models and model serving endpoints by monitoring inference tables containing model inputs and predictions through a single pane of glass.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 21"
+  },
+  {
+    "controlId": "DASF-22",
+    "title": "Build models with all representative, accurate and relevant data sources",
+    "risks": [
+      {
+        "component": "Evaluation",
+        "identifier": "6.2",
+        "riskId": "evaluation-6.2",
+        "summary": "Evaluation Risk 6.2"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.3",
+        "riskId": "model-7.3",
+        "summary": "Model Risk 7.3"
+      }
+    ],
+    "description": "Harnessing internal data and intellectual property to customize large AI models can offer a significant competitive edge. However, this process can be complex, involving coordination across various parts of the organization. The Data Intelligence Platform addresses this challenge by integrating data across traditionally isolated departments and systems. This integration facilitates a more cohesive data and AI strategy, enabling the effective training, testing and evaluation of models using a comprehensive dataset. Use caution when preparing data for traditional models and GenAI training to ensure that you are not unintentionally including data that causes legal conflicts, such as copyright violations, privacy violations or HIPAA violations.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 22"
+  },
+  {
+    "controlId": "DASF-23",
+    "title": "Register, version, approve, promote and deploy model",
+    "risks": [
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      }
+    ],
+    "description": "MLflow Model Registry supports managing the machine learning model lifecycle with capabilities for lineage tracking, versioning, staging and model serving.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 23"
+  },
+  {
+    "controlId": "DASF-24",
+    "title": "Control access to models and model assets",
+    "risks": [
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.3",
+        "riskId": "model-management-8.3",
+        "summary": "Model Management Risk 8.3"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Organizations commonly encounter challenges in tracking and controlling access to ML models, auditing their usage, and understanding their evolution in complex machine learning workflows. Unity Catalog integrates with the MLflow Model Registry across model lifecycles. This approach simplifies the management and oversight of ML models, proving particularly valuable in environments with multiple teams and diverse projects.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 24"
+  },
+  {
+    "controlId": "DASF-25",
+    "title": "Use retrieval augmented generation (RAG) with large language models (LLMs)",
+    "risks": [
+      {
+        "component": "Evaluation",
+        "identifier": "6.2",
+        "riskId": "evaluation-6.2",
+        "summary": "Evaluation Risk 6.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.8",
+        "riskId": "model-serving-inference-requests-9.8",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.8"
+      }
+    ],
+    "description": "Generating relevant and accurate responses in large language models (LLMs) while avoiding hallucinations requires grounding them in domain-specific knowledge. Retrieval augmented generation (RAG) addresses this by breaking down extensive datasets into manageable segments (\u201cchunks\u201d) that are \u201cvector embedded.\u201d These vector embeddings are mathematical representations that help the model understand and quantify different data segments. As a result, LLMs produce responses that are contextually relevant and deeply rooted in the specific domain knowledge.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 25"
+  },
+  {
+    "controlId": "DASF-26",
+    "title": "Fine-tune large language models (LLMs)",
+    "risks": [
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.8",
+        "riskId": "model-serving-inference-requests-9.8",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.8"
+      }
+    ],
+    "description": "Data is your competitive advantage. Use it to customize large AI models to beat your competition. Produce new model variants with tailored LLM response style and structure via fine-tuning. Fine-tune your own LLM with open models to own your IP.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 26"
+  },
+  {
+    "controlId": "DASF-27",
+    "title": "Pretrain a large language model (LLM)",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.8",
+        "riskId": "raw-data-1.8",
+        "summary": "Raw Data Risk 1.8"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.3",
+        "riskId": "model-7.3",
+        "summary": "Model Risk 7.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.8",
+        "riskId": "model-serving-inference-requests-9.8",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.8"
+      }
+    ],
+    "description": "Data is your competitive advantage. Use it to customize large AI models to beat your competition by pretraining models with your data, imbuing the model with domain-specific knowledge, vocabulary and semantics. Pretrain your own LLM with MosaicML to own your IP.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 27"
+  },
+  {
+    "controlId": "DASF-28",
+    "title": "Create model aliases, tags and annotations",
+    "risks": [
+      {
+        "component": "Model Management",
+        "identifier": "8.1",
+        "riskId": "model-management-8.1",
+        "summary": "Model Management Risk 8.1"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.3",
+        "riskId": "model-management-8.3",
+        "summary": "Model Management Risk 8.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Model aliases in machine learning workflows allow you to assign a mutable, named reference to a specific version of a registered model. This functionality is beneficial for tracking and managing different stages of a model\u2019s lifecycle, indicating the current deployment status of any given model version.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 28"
+  },
+  {
+    "controlId": "DASF-29",
+    "title": "Build MLOps workflows",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.8",
+        "riskId": "raw-data-1.8",
+        "summary": "Raw Data Risk 1.8"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.1",
+        "riskId": "model-management-8.1",
+        "summary": "Model Management Risk 8.1"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.3",
+        "riskId": "model-management-8.3",
+        "summary": "Model Management Risk 8.3"
+      }
+    ],
+    "description": "The lakehouse forms the foundation of a data-centric AI platform. Key to this is the ability to manage both data and AI assets from a unified governance solution on the lakehouse. Databricks Unity Catalog enables this by providing centralized access control, auditing, approvals, model workflow, lineage, and data discovery capabilities across Databricks workspaces. These benefits are now extended to MLflow Models with the introduction of Models in Unity Catalog. Through providing a hosted version of the MLflow Model Registry in Unity Catalog, the full lifecycle of an ML model can be managed while leveraging Unity Catalog\u2019s capability to share assets across Databricks workspaces and trace lineage across both data and models.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 29"
+  },
+  {
+    "controlId": "DASF-30",
+    "title": "Encrypt models",
+    "risks": [
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.2",
+        "riskId": "model-serving-inference-response-10.2",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.5",
+        "riskId": "model-serving-inference-response-10.5",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.5"
+      }
+    ],
+    "description": "Databricks Platform secures model assets and their transfer with TLS 1.2+ in-transit encryption. Additionally, Unity Catalog\u2019s managed model registry provides encryption at rest for persisting models, further enhancing security.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 30"
+  },
+  {
+    "controlId": "DASF-31",
+    "title": "Secure model serving endpoints",
+    "risks": [
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.2",
+        "riskId": "model-serving-inference-response-10.2",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.5",
+        "riskId": "model-serving-inference-response-10.5",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.5"
+      }
+    ],
+    "description": "Model serving involves risks of unauthorized data access and model tampering, which can compromise the integrity and reliability of machine learning deployments. Mosaic AI Model Serving addresses these concerns by providing secure-by-default REST API endpoints for MLflow machine learning models, featuring autoscaling, high availability and low latency.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 31"
+  },
+  {
+    "controlId": "DASF-32",
+    "title": "Streamline the usage and management of various large language model (LLM) providers",
+    "risks": [
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.4",
+        "riskId": "model-management-8.4",
+        "summary": "Model Management Risk 8.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.2",
+        "riskId": "model-serving-inference-response-10.2",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.5",
+        "riskId": "model-serving-inference-response-10.5",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.5"
+      }
+    ],
+    "description": "External models are third-party models hosted outside of Databricks. Supported by Model Serving AI Gateway, Databricks external models via the AI Gateway allow you to streamline the usage and management of various large language model (LLM) providers, such as OpenAI and Anthropic, within an organization. You can also use Mosaic AI Model Serving as a provider to serve predictive ML models, which offers rate limits for those endpoints. As part of this support, Model Serving offers a high-level interface that simplifies the interaction with these services by providing a unified endpoint to handle specific LLM-related requests. In addition, Databricks support for external models provides centralized credential management. By storing API keys in one secure location, organizations can enhance their security posture by minimizing the exposure of sensitive API keys throughout the system. It also helps to prevent exposing these keys within code or requiring end users to manage keys safely.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 32"
+  },
+  {
+    "controlId": "DASF-33",
+    "title": "Manage credentials securely",
+    "risks": [
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      }
+    ],
+    "description": "Databricks Secrets stores your credentials and references them in notebooks, scripts, configuration properties and jobs. Integrating with heterogeneous systems requires managing a potentially large set of credentials and safely distributing them across an organization. Instead of directly entering your credentials into a notebook, use Databricks Secrets to store your credentials and reference them in notebooks and jobs to prevent credential leaks through models. Databricks secret management allows users to use and share credentials within Databricks securely. You can also choose to use a third-party secret management service, such as AWS Secrets Manager or a third-party secret manager.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 33"
+  },
+  {
+    "controlId": "DASF-34",
+    "title": "Run models in multiple layers of isolation",
+    "risks": [
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.3",
+        "riskId": "model-serving-inference-requests-9.3",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.3"
+      }
+    ],
+    "description": "Databricks Serverless Compute provides a secure-by-design model serving service featuring defense-in-depth controls like dedicated VMs, network segmentation, and encryption for data in transit and at rest. It adheres to the principle of least privilege for enhanced security.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 34"
+  },
+  {
+    "controlId": "DASF-35",
+    "title": "Track model performance",
+    "risks": [
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.1",
+        "riskId": "model-serving-inference-response-10.1",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.1"
+      }
+    ],
+    "description": "Databricks Lakehouse Monitoring provides performance metrics and data quality statistics across all account tables. It tracks the performance of machine learning models and model serving endpoints by observing inference tables with model inputs and predictions.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 35"
+  },
+  {
+    "controlId": "DASF-36",
+    "title": "Set up monitoring alerts",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.3",
+        "riskId": "raw-data-1.3",
+        "summary": "Raw Data Risk 1.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.1",
+        "riskId": "model-serving-inference-response-10.1",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.1"
+      }
+    ],
+    "description": "Databricks SQL alerts can monitor the metrics table for security-based conditions, ensuring data integrity and timely response to potential issues: Statistic range Alert: Triggers when a specific statistic, such as the fraction of missing values, exceeds a predetermined threshold. Data distribution shift alert: Activates upon shifts in data distribution, as indicated by the drift metrics table. Baseline divergence alert: Alerts if data significantly diverges from a baseline, suggesting potential needs for data analysis or model retraining, particularly in InferenceLog analysis.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 36"
+  },
+  {
+    "controlId": "DASF-37",
+    "title": "Set up inference tables for monitoring and debugging models",
+    "risks": [
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.3",
+        "riskId": "model-serving-inference-requests-9.3",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.4",
+        "riskId": "model-serving-inference-requests-9.4",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.4"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.1",
+        "riskId": "model-serving-inference-response-10.1",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.3",
+        "riskId": "model-serving-inference-response-10.3",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Databricks inference tables automatically record incoming requests and outgoing responses to model serving endpoints, storing them as a Unity Catalog Delta table. This table can be used to monitor, debug and enhance ML models. By coupling inference tables with Lakehouse Monitoring, customers can also set up automated monitoring jobs and alerts on inference tables, such as monitoring text quality or toxicity from endpoints serving LLMs, etc. Critical applications of an inference table include: Retraining dataset creation, Quality monitoring, Diagnostics and debugging, and Mislabeled data identification.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 37"
+  },
+  {
+    "controlId": "DASF-38",
+    "title": "Platform security \u2014 vulnerability management",
+    "risks": [
+      {
+        "component": "Platform",
+        "identifier": "12.1",
+        "riskId": "platform-12.1",
+        "summary": "Platform Risk 12.1"
+      }
+    ],
+    "description": "Managing vulnerabilities entails addressing complex security challenges with performance impact considerations. Databricks\u2019 formal and documented vulnerability management program, overseen by the chief security officer (CSO), is approved by management, undergoes annual reviews and is communicated to all relevant internal parties. The policy requires that vulnerabilities be addressed based on severity: critical vulnerabilities within 14 days, high severity within 30 days and medium severity within 60 days.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 38"
+  },
+  {
+    "controlId": "DASF-39",
+    "title": "Platform security \u2014 Incident Response Team",
+    "risks": [
+      {
+        "component": "Platform",
+        "identifier": "12.2",
+        "riskId": "platform-12.2",
+        "summary": "Platform Risk 12.2"
+      },
+      {
+        "component": "Platform",
+        "identifier": "12.3",
+        "riskId": "platform-12.3",
+        "summary": "Platform Risk 12.3"
+      }
+    ],
+    "description": "Databricks has established a formal incident response plan that outlines key elements such as roles, responsibilities, escalation paths and external communication protocols. The platform handles over 9TB of audit logs daily, aiding customer and Databricks security investigations. A dedicated security incident response team operates an internal Databricks instance, consolidating essential log sources for thorough security analysis. Databricks ensures continual operational readiness with a 24/7/365 on-call rotation. Additionally, a proactive hunting program and a specialized detection team support the incident response program.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 39"
+  },
+  {
+    "controlId": "DASF-40",
+    "title": "Platform security \u2014 internal access",
+    "risks": [
+      {
+        "component": "Platform",
+        "identifier": "12.4",
+        "riskId": "platform-12.4",
+        "summary": "Platform Risk 12.4"
+      }
+    ],
+    "description": "Databricks personnel, by default, do not have access to customer workspaces or production environments. Access may be temporarily requested by Databricks staff for purposes such as investigating outages, security events or supporting deployments. Customers have the option to disable this access. Additionally, staff activity within these environments is recorded in customer audit logs. Accessing these areas requires multi-factor authentication, and employees must connect to the Databricks VPN.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 40"
+  },
+  {
+    "controlId": "DASF-41",
+    "title": "Platform security \u2014 secure SDLC",
+    "risks": [
+      {
+        "component": "Platform",
+        "identifier": "12.5",
+        "riskId": "platform-12.5",
+        "summary": "Platform Risk 12.5"
+      }
+    ],
+    "description": "Databricks engineering integrates security throughout the software development lifecycle (SDLC), encompassing both technical and process-level controls under the oversight of our chief security officer (CSO). Activities within our SDLC include: Code peer reviews, Static and dynamic scans for code and containers, including dependencies, Feature-level security reviews, Annual software engineering security training, and Cross-organizational collaborations between security, product management, product security and security champions. These development controls are augmented by internal and external penetration testing programs, with findings tracked for resolution and reported to our executive team. Databricks' processes undergo an independent annual review, the results of which are published in our SOC 2 Type 2 report, available upon request.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 41"
+  },
+  {
+    "controlId": "DASF-42",
+    "title": "Employ data-centric MLOps and LLMOps",
+    "risks": [
+      {
+        "component": "Data Prep",
+        "identifier": "2.2",
+        "riskId": "data-prep-2.2",
+        "summary": "Data Prep Risk 2.2"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.3",
+        "riskId": "data-prep-2.3",
+        "summary": "Data Prep Risk 2.3"
+      },
+      {
+        "component": "Data Prep",
+        "identifier": "2.4",
+        "riskId": "data-prep-2.4",
+        "summary": "Data Prep Risk 2.4"
+      },
+      {
+        "component": "Governance",
+        "identifier": "4.2",
+        "riskId": "governance-4.2",
+        "summary": "Governance Risk 4.2"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.1",
+        "riskId": "algorithms-5.1",
+        "summary": "Algorithms Risk 5.1"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.3",
+        "riskId": "algorithms-5.3",
+        "summary": "Algorithms Risk 5.3"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.2",
+        "riskId": "model-7.2",
+        "summary": "Model Risk 7.2"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.3",
+        "riskId": "model-7.3",
+        "summary": "Model Risk 7.3"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.3",
+        "riskId": "model-management-8.3",
+        "summary": "Model Management Risk 8.3"
+      },
+      {
+        "component": "Operations",
+        "identifier": "11.1",
+        "riskId": "operations-11.1",
+        "summary": "Operations Risk 11.1"
+      }
+    ],
+    "description": "MLOps enhances efficiency, scalability, security and risk reduction in machine learning projects. Databricks integrates with MLflow, focusing on enterprise reliability, security and scalability for managing the machine learning lifecycle. The latest update to MLflow introduces new LLMOps features for better management and deployment of large language models (LLMs). This includes integrations with Hugging Face Transformers, OpenAI and the external models in Mosaic AI Model Serving. MLflow also integrates with LangChain and a prompt engineering UI, facilitating generative AI application development for use cases such as chatbots, document summarization and text classification.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 42"
+  },
+  {
+    "controlId": "DASF-43",
+    "title": "Use access control lists",
+    "risks": [
+      {
+        "component": "Data Prep",
+        "identifier": "2.3",
+        "riskId": "data-prep-2.3",
+        "summary": "Data Prep Risk 2.3"
+      },
+      {
+        "component": "Algorithms",
+        "identifier": "5.3",
+        "riskId": "algorithms-5.3",
+        "summary": "Algorithms Risk 5.3"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.1",
+        "riskId": "model-7.1",
+        "summary": "Model Risk 7.1"
+      }
+    ],
+    "description": "Databricks access control lists (ACLs) enable you to configure permissions for accessing and interacting with workspace objects, including folders, notebooks, experiments, models, clusters, pools, jobs, Delta Live Tables pipelines, alerts, dashboards, queries and SQL warehouses.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 43"
+  },
+  {
+    "controlId": "DASF-44",
+    "title": "Triggering actions in response to a specific event",
+    "risks": [
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Operations",
+        "identifier": "11.1",
+        "riskId": "operations-11.1",
+        "summary": "Operations Risk 11.1"
+      }
+    ],
+    "description": "Webhooks in the MLflow Model Registry enable you to automate machine learning workflow by triggering actions in response to specific events. These webhooks facilitate seamless integrations, allowing for the automatic execution of various processes. For example, webhooks are used for: CI workflow trigger (Validate your model automatically when creating a new version), Team notifications (Send alerts through a messaging app when a model stage transition request is received), Model fairness evaluation (Invoke a workflow to assess model fairness and bias upon a production transition request), and Automated deployment (Trigger a deployment pipeline when a new tag is created on a model).",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 44"
+  },
+  {
+    "controlId": "DASF-45",
+    "title": "Evaluate models",
+    "risks": [
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Evaluation",
+        "identifier": "6.2",
+        "riskId": "evaluation-6.2",
+        "summary": "Evaluation Risk 6.2"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.3",
+        "riskId": "model-7.3",
+        "summary": "Model Risk 7.3"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      },
+      {
+        "component": "Operations",
+        "identifier": "11.1",
+        "riskId": "operations-11.1",
+        "summary": "Operations Risk 11.1"
+      }
+    ],
+    "description": "Model evaluation is a critical component of the machine learning lifecycle. It provides data scientists with the tools to measure, interpret and explain the performance of their models. MLflow plays a critical role in accelerating model development by offering insights into the reasons behind a model's performance and guiding improvements and iterations. MLflow offers many industry-standard native evaluation metrics for classical machine learning algorithms and LLMs, and also facilitates the use of custom evaluation metrics.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 45"
+  },
+  {
+    "controlId": "DASF-46",
+    "title": "Store and retrieve embeddings securely",
+    "risks": [
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.1",
+        "riskId": "model-serving-inference-requests-9.1",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.2",
+        "riskId": "model-serving-inference-requests-9.2",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.2"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.5",
+        "riskId": "model-serving-inference-requests-9.5",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.5"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.6",
+        "riskId": "model-serving-inference-requests-9.6",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.6"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.7",
+        "riskId": "model-serving-inference-requests-9.7",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.7"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.8",
+        "riskId": "model-serving-inference-requests-9.8",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.8"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.9",
+        "riskId": "model-serving-inference-requests-9.9",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.9"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.10",
+        "riskId": "model-serving-inference-requests-9.10",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.10"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Response",
+        "identifier": "10.4",
+        "riskId": "model-serving-inference-response-10.4",
+        "summary": "Model Serving \u2014 Inference Response Risk 10.4"
+      }
+    ],
+    "description": "Mosaic AI Vector Search is a vector database that is built into the Databricks Data Intelligence Platform and integrated with its governance and productivity tools. A vector database is a database that is optimized to store and retrieve embeddings. Embeddings are mathematical representations of the semantic content of data, typically text or image data. Embeddings are usually generated by feature extraction models for text, image, audio or multi-modal data, and are a key component of many GenAI applications that depend on finding documents or images that are similar to each other. Examples are RAG systems, recommender systems, and image and video recognition. Databricks implements the following security controls to protect your data: Every customer request to Vector Search is logically isolated, authenticated and authorized, and Mosaic AI Vector Search encrypts all data at rest (AES-256) and in transit (TLS 1.2+).",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 46"
+  },
+  {
+    "controlId": "DASF-47",
+    "title": "Compare LLM outputs on set prompts",
+    "risks": [
+      {
+        "component": "Evaluation",
+        "identifier": "6.2",
+        "riskId": "evaluation-6.2",
+        "summary": "Evaluation Risk 6.2"
+      }
+    ],
+    "description": "New, no-code visual tools allow users to compare models' output based on set prompts, which are automatically tracked within MLflow. With integration into Mosaic AI Model Serving, customers can deploy the best model to production. The AI Playground is a chat-like environment where you can test, prompt and compare LLMs.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 47"
+  },
+  {
+    "controlId": "DASF-48",
+    "title": "Use hardened Runtime for Machine Learning",
+    "risks": [
+      {
+        "component": "Model",
+        "identifier": "7.3",
+        "riskId": "model-7.3",
+        "summary": "Model Risk 7.3"
+      }
+    ],
+    "description": "Databricks Runtime for Machine Learning (Databricks Runtime ML) now automates cluster creation with versatile infrastructure, encompassing pre-built ML/DL libraries and custom library integration. Enhanced scalability and cost management tools optimize performance and expenditure. The refined user interface caters to various expertise levels, while new collaboration features support team-based projects. Comprehensive training resources and detailed documentation complement these improvements.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 48"
+  },
+  {
+    "controlId": "DASF-49",
+    "title": "Automate LLM evaluation",
+    "risks": [
+      {
+        "component": "Evaluation",
+        "identifier": "6.1",
+        "riskId": "evaluation-6.1",
+        "summary": "Evaluation Risk 6.1"
+      },
+      {
+        "component": "Model Serving \u2014 Inference Requests",
+        "identifier": "9.8",
+        "riskId": "model-serving-inference-requests-9.8",
+        "summary": "Model Serving \u2014 Inference Requests Risk 9.8"
+      }
+    ],
+    "description": "The \"LLM-as-a-judge\" feature in MLflow 2.8 automates LLM evaluation, offering a practical alternative to human judgment. It's designed to be efficient and cost-effective, maintaining consistency with human scores. This tool supports various metrics, including standard and customizable GenAI metrics, and allows users to select an LLM as a judge and define specific grading criteria.",
+    "controlCategory": "Implementation",
+    "readableControlId": "DASF 49"
+  },
+  {
+    "controlId": "DASF-50",
+    "title": "Platform compliance",
+    "risks": [
+      {
+        "component": "Platform",
+        "identifier": "12.6",
+        "riskId": "platform-12.6",
+        "summary": "Platform Risk 12.6"
+      }
+    ],
+    "description": "Develop your solutions on a platform created using some of the most rigorous security and compliance standards in the world. Get independent audit reports verifying that Databricks adheres to security controls for ISO 27001, ISO 27018, SOC 1, SOC 2, FedRAMP, HITRUST, IRAP, etc.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 50"
+  },
+  {
+    "controlId": "DASF-51",
+    "title": "Share data and AI assets securely",
+    "risks": [
+      {
+        "component": "Raw Data",
+        "identifier": "1.1",
+        "riskId": "raw-data-1.1",
+        "summary": "Raw Data Risk 1.1"
+      },
+      {
+        "component": "Raw Data",
+        "identifier": "1.6",
+        "riskId": "raw-data-1.6",
+        "summary": "Raw Data Risk 1.6"
+      },
+      {
+        "component": "Raw Data",
+        "identifier": "1.7",
+        "riskId": "raw-data-1.7",
+        "summary": "Raw Data Risk 1.7"
+      },
+      {
+        "component": "Datasets",
+        "identifier": "3.1",
+        "riskId": "datasets-3.1",
+        "summary": "Datasets Risk 3.1"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.1",
+        "riskId": "model-management-8.1",
+        "summary": "Model Management Risk 8.1"
+      },
+      {
+        "component": "Model Management",
+        "identifier": "8.2",
+        "riskId": "model-management-8.2",
+        "summary": "Model Management Risk 8.2"
+      }
+    ],
+    "description": "Databricks Delta Sharing lets you share data and AI assets securely in Databricks with users outside your organization, whether those users use Databricks or not.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 51"
+  },
+  {
+    "controlId": "DASF-52",
+    "title": "Source code control",
+    "risks": [
+      {
+        "component": "Data Prep",
+        "identifier": "2.1",
+        "riskId": "data-prep-2.1",
+        "summary": "Data Prep Risk 2.1"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.4",
+        "riskId": "model-7.4",
+        "summary": "Model Risk 7.4"
+      }
+    ],
+    "description": "Databricks' Git Repository integration supports effective code and third-party libraries management, enhancing customer control over their development environment.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 52"
+  },
+  {
+    "controlId": "DASF-53",
+    "title": "Third-party library control",
+    "risks": [
+      {
+        "component": "Algorithms",
+        "identifier": "5.4",
+        "riskId": "algorithms-5.4",
+        "summary": "Algorithms Risk 5.4"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.3",
+        "riskId": "model-7.3",
+        "summary": "Model Risk 7.3"
+      },
+      {
+        "component": "Model",
+        "identifier": "7.4",
+        "riskId": "model-7.4",
+        "summary": "Model Risk 7.4"
+      }
+    ],
+    "description": "Databricks' library management system allows administrators to manage the installation and usage of third-party libraries effectively. This feature enhances the security and efficiency of systems, pipelines and data by giving administrators precise control over their development environment.",
+    "controlCategory": "Out-of-the-box",
+    "readableControlId": "DASF 53"
+  }
+]
