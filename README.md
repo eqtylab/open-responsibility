@@ -8,3 +8,5 @@ configs:
         path:
           - "catalog.json"
 ---
+
+https://huggingface.co/datasets/open-responsibility/frameworks
