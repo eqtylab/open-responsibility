@@ -125,212 +125,210 @@
     ]
   },
   "controlList": [
-    [
-      {
-        "controlId": "AIDBA-1",
-        "title": "Data Bias Assessment and Mitigation",
-        "description": "The organization shall conduct comprehensive assessments to identify and mitigate potential biases in the data used to train AI systems. The following measures shall be implemented:\n\na. Bias Assessment Methodology: Establish a documented methodology for assessing biases in training data, including the specific types of biases to be evaluated (e.g., representational bias, sample bias, historical bias) and the techniques used to identify them (e.g., statistical analysis, fairness metrics).\n\nb. Bias Assessment Frequency: Conduct data bias assessments at regular intervals, such as prior to the initial use of the data for training, whenever significant changes are made to the data, and at least annually.\n\nc. Bias Assessment Reporting: Document the results of data bias assessments, including identified biases, their potential impact on AI system outcomes, and recommended mitigation strategies.\n\nd. Bias Mitigation Planning: Develop and maintain a bias mitigation plan that outlines the specific actions to be taken to address identified biases in the training data. This may include techniques such as data resampling, data augmentation, or the use of bias mitigation algorithms.\n\ne. Bias Mitigation Implementation: Implement the bias mitigation plan and document the actions taken to reduce or eliminate identified biases in the training data.\n\nf. Ongoing Monitoring: Establish processes for ongoing monitoring of AI system outcomes to detect and respond to any emergent biases that may arise over time.",
-        "controlCategory": "Data Bias",
-        "readableControlId": "AIDBA-1",
-        "severity": "medium",
-        "automationPlatforms": [],
-        "criteria": [
-          {
-            "criteriaId": "1",
-            "title": "Bias Assessment Methodology Criteria",
-            "description": "1.1. Documented methodology for assessing biases in training data.\n1.2. Identification of specific types of biases to be evaluated (e.g., representational bias, sample bias, historical bias).\n1.3. Description of techniques used to identify biases (e.g., statistical analysis, fairness metrics)."
-          },
-          {
-            "criteriaId": "2",
-            "title": "Bias Assessment Frequency Criteria",
-            "description": "2.1. Documented schedule for conducting data bias assessments.\n2.2. Evidence of bias assessments performed prior to initial data use, when significant changes are made, and at least annually."
-          },
-          {
-            "criteriaId": "3",
-            "title": "Bias Assessment Reporting Criteria",
-            "description": "3.1. Documented results of data bias assessments, including identified biases and their potential impact on AI system outcomes.\n3.2. Recommendations for bias mitigation strategies based on assessment findings."
-          },
-          {
-            "criteriaId": "4",
-            "title": "Bias Mitigation Planning Criteria",
-            "description": "4.1. Documented bias mitigation plan outlining specific actions to address identified biases.\n4.2. Inclusion of techniques such as data resampling, data augmentation, or bias mitigation algorithms in the mitigation plan."
-          },
-          {
-            "criteriaId": "5",
-            "title": "Bias Mitigation Implementation Criteria",
-            "description": "5.1. Evidence of the implementation of the bias mitigation plan.\n5.2. Documentation of actions taken to reduce or eliminate identified biases in the training data."
-          },
-          {
-            "criteriaId": "6",
-            "title": "Ongoing Monitoring Criteria",
-            "description": "6.1. Established processes for ongoing monitoring of AI system outcomes to detect emergent biases.\n6.2. Documentation of any biases identified through ongoing monitoring and actions taken to address them."
-          }
-        ]
-      },
-      {
-        "controlId": "AIDBA-2",
-        "title": "Data Collection and Preprocessing",
-        "description": "The organization shall ensure that data collection and preprocessing steps are designed to minimize the introduction of biases and ensure data quality. The following measures shall be implemented:\n\na. Data Source Selection: Identify and select diverse and representative data sources to reduce the risk of biases arising from limited or skewed data.\n\nb. Data Sampling Techniques: Employ appropriate data sampling techniques, such as stratified sampling or oversampling, to ensure balanced representation of different groups or classes in the training data.\n\nc. Data Quality Checks: Implement data quality checks to identify and address issues such as missing values, outliers, inconsistencies, and errors in the collected data.\n\nd. Data Preprocessing Guidelines: Establish and follow guidelines for data preprocessing tasks, including data cleaning, normalization, and feature selection, to maintain data integrity and reduce the introduction of biases.\n\ne. Data Labeling and Annotation: Ensure that data labeling and annotation processes are performed consistently and objectively, with clear guidelines and quality control measures to minimize the introduction of biases.\n\nf. Data Documentation: Maintain comprehensive documentation of data collection and preprocessing steps, including data sources, sampling methods, preprocessing techniques, and any assumptions made during the process.",
-        "controlCategory": "Data Bias",
-        "readableControlId": "AIDBA-2",
-        "severity": "medium",
-        "automationPlatforms": [],
-        "criteria": [
-          {
-            "criteriaId": "1",
-            "title": "Data Source Selection Criteria",
-            "description": "1.1. Identification and selection of diverse and representative data sources.\n1.2. Documentation of the rationale for data source selection.\n1.3. Evidence of efforts to mitigate biases arising from limited or skewed data sources."
-          },
-          {
-            "criteriaId": "2",
-            "title": "Data Sampling Techniques Criteria",
-            "description": "2.1. Documented data sampling techniques used to ensure balanced representation.\n2.2. Justification for the selected sampling techniques based on data characteristics and bias mitigation goals.\n2.3. Evidence of the application of appropriate sampling techniques during data collection and preprocessing."
-          },
-          {
-            "criteriaId": "3",
-            "title": "Data Quality Checks Criteria",
-            "description": "3.1. Documented processes for performing data quality checks.\n3.2. Identification of specific data quality issues to be addressed (e.g., missing values, outliers, inconsistencies).\n3.3. Evidence of the execution of data quality checks and the resolution of identified issues."
-          },
-          {
-            "criteriaId": "4",
-            "title": "Data Preprocessing Guidelines Criteria",
-            "description": "4.1. Established guidelines for data preprocessing tasks, including data cleaning, normalization, and feature selection.\n4.2. Documentation of the rationale behind the preprocessing guidelines.\n4.3. Evidence of adherence to the preprocessing guidelines during the data preparation process."
-          },
-          {
-            "criteriaId": "5",
-            "title": "Data Labeling and Annotation Criteria",
-            "description": "5.1. Documented guidelines for consistent and objective data labeling and annotation.\n5.2. Quality control measures to ensure the accuracy and consistency of labeled and annotated data.\n5.3. Evidence of the application of the labeling and annotation guidelines during the data preparation process."
-          },
-          {
-            "criteriaId": "6",
-            "title": "Data Documentation Criteria",
-            "description": "6.1. Comprehensive documentation of data collection and preprocessing steps.\n6.2. Inclusion of information on data sources, sampling methods, preprocessing techniques, and assumptions made.\n6.3. Regular updates to the documentation to reflect any changes in the data collection and preprocessing processes."
-          }
-        ]
-      },
-      {
-        "controlId": "AIDBA-3",
-        "title": "Model Development and Training",
-        "description": "The organization shall ensure that the model development and training phase incorporates measures to mitigate biases and promote fairness. The following measures shall be implemented:\n\na. Algorithm Selection: Select appropriate algorithms that are less prone to amplifying biases present in the training data. Consider the use of fairness-aware algorithms or algorithms with built-in bias mitigation techniques.\n\nb. Hyperparameter Tuning: Conduct thorough hyperparameter tuning to optimize model performance while considering fairness metrics. Evaluate the impact of different hyperparameter settings on bias mitigation.\n\nc. Bias Mitigation Techniques: Incorporate bias mitigation techniques during model training, such as regularization, adversarial debiasing, or fairness constraints. Document the specific techniques applied and their effectiveness in reducing biases.\n\nd. Training Data Balancing: Ensure that the training data is balanced and representative of the target population. Apply techniques like resampling, oversampling, or undersampling to address class imbalances that may contribute to biases.\n\ne. Fairness Metrics: Incorporate fairness metrics during model training and validation to assess the model's performance in terms of fairness and bias mitigation. Use appropriate fairness metrics based on the specific context and requirements of the AI system.\n\nf. Model Transparency: Maintain transparency in the model development process by documenting the algorithms used, hyperparameter settings, bias mitigation techniques applied, and any assumptions made during training.",
-        "controlCategory": "Data Bias",
-        "readableControlId": "AIDBA-3",
-        "severity": "medium",
-        "automationPlatforms": [],
-        "criteria": [
-          {
-            "criteriaId": "1",
-            "title": "Algorithm Selection Criteria",
-            "description": "1.1. Documentation of the rationale for selecting specific algorithms, considering their potential impact on bias mitigation.\n1.2. Evidence of the use of fairness-aware algorithms or algorithms with built-in bias mitigation techniques, where applicable.\n1.3. Justification for the chosen algorithms based on their suitability for the specific AI system and bias mitigation requirements."
-          },
-          {
-            "criteriaId": "2",
-            "title": "Hyperparameter Tuning Criteria",
-            "description": "2.1. Documentation of the hyperparameter tuning process, including the range of hyperparameters explored and the evaluation metrics used.\n2.2. Evidence of considering fairness metrics during hyperparameter tuning.\n2.3. Analysis of the impact of different hyperparameter settings on bias mitigation and model performance."
-          },
-          {
-            "criteriaId": "3",
-            "title": "Bias Mitigation Techniques Criteria",
-            "description": "3.1. Documentation of the specific bias mitigation techniques applied during model training.\n3.2. Evaluation of the effectiveness of the applied bias mitigation techniques using appropriate fairness metrics.\n3.3. Justification for the selection of specific bias mitigation techniques based on their suitability for the AI system and the types of biases being addressed."
-          },
-          {
-            "criteriaId": "4",
-            "title": "Training Data Balancing Criteria",
-            "description": "4.1. Documentation of the techniques used to balance the training data, such as resampling, oversampling, or undersampling.\n4.2. Analysis of the impact of data balancing techniques on model performance and bias mitigation.\n4.3. Evidence of efforts to ensure that the training data is representative of the target population."
-          },
-          {
-            "criteriaId": "5",
-            "title": "Fairness Metrics Criteria",
-            "description": "5.1. Identification of appropriate fairness metrics based on the specific context and requirements of the AI system.\n5.2. Documentation of the fairness metrics used during model training and validation.\n5.3. Evaluation of the model's performance in terms of fairness and bias mitigation using the selected fairness metrics."
-          },
-          {
-            "criteriaId": "6",
-            "title": "Model Transparency Criteria",
-            "description": "6.1. Comprehensive documentation of the model development process, including algorithms used, hyperparameter settings, and bias mitigation techniques applied.\n6.2. Clear documentation of any assumptions made during model training.\n6.3. Availability of model documentation to relevant stakeholders for transparency and accountability."
-          }
-        ]
-      },
-      {
-        "controlId": "AIDBA-4",
-        "title": "Model Evaluation and Testing",
-        "description": "The organization shall conduct comprehensive evaluations and testing of trained AI models to assess their performance, fairness, and the presence of any residual biases. The following measures shall be implemented:\n\na. Evaluation Metrics Selection: Select appropriate evaluation metrics that cover both performance and fairness aspects of the AI model. Include metrics such as accuracy, precision, recall, F1-score, as well as fairness metrics like demographic parity, equalized odds, or equal opportunity.\n\nb. Testing Methodology: Establish a robust testing methodology that includes techniques such as cross-validation, holdout validation, or stratified sampling to assess the model's performance and fairness across different subsets of the data.\n\nc. Bias Testing: Conduct targeted bias testing to evaluate the model's performance across different protected attributes or sensitive groups. Assess the model's fairness and identify any disparities in outcomes or error rates across these groups.\n\nd. Threshold Analysis: Perform threshold analysis to determine the appropriate decision thresholds for the AI model, considering both performance and fairness metrics. Evaluate the impact of different threshold settings on the model's fairness and accuracy.\n\ne. Residual Bias Assessment: Assess the presence of any residual biases in the trained model that may not have been fully mitigated during the training phase. Identify the sources and magnitude of these biases and develop strategies for further mitigation.\n\nf. Model Validation: Validate the AI model's performance and fairness on independent test datasets that were not used during training. Ensure that the model generalizes well to unseen data and maintains its fairness properties.",
-        "controlCategory": "Data Bias",
-        "readableControlId": "AIDBA-4",
-        "severity": "medium",
-        "automationPlatforms": [],
-        "criteria": [
-          {
-            "criteriaId": "1",
-            "title": "Evaluation Metrics Selection Criteria",
-            "description": "1.1. Documentation of the selected evaluation metrics, including both performance and fairness metrics.\n1.2. Justification for the choice of evaluation metrics based on the specific requirements and context of the AI system.\n1.3. Evidence of the use of appropriate fairness metrics, such as demographic parity, equalized odds, or equal opportunity."
-          },
-          {
-            "criteriaId": "2",
-            "title": "Testing Methodology Criteria",
-            "description": "2.1. Documented testing methodology, including techniques such as cross-validation, holdout validation, or stratified sampling.\n2.2. Evidence of the application of the testing methodology to assess the model's performance and fairness across different data subsets.\n2.3. Analysis of the results obtained from the testing methodology, including performance and fairness metrics."
-          },
-          {
-            "criteriaId": "3",
-            "title": "Bias Testing Criteria",
-            "description": "3.1. Documentation of the targeted bias testing conducted, including the protected attributes or sensitive groups considered.\n3.2. Evaluation of the model's fairness and identification of any disparities in outcomes or error rates across different groups.\n3.3. Evidence of the use of appropriate fairness metrics during bias testing."
-          },
-          {
-            "criteriaId": "4",
-            "title": "Threshold Analysis Criteria",
-            "description": "4.1. Documentation of the threshold analysis performed, including the range of threshold values considered.\n4.2. Evaluation of the impact of different threshold settings on the model's fairness and accuracy.\n4.3. Justification for the selected decision thresholds based on the balance between performance and fairness requirements."
-          },
-          {
-            "criteriaId": "5",
-            "title": "Residual Bias Assessment Criteria",
-            "description": "5.1. Assessment of the presence of any residual biases in the trained model.\n5.2. Identification of the sources and magnitude of residual biases.\n5.3. Development of strategies and action plans for further bias mitigation based on the residual bias assessment findings."
-          },
-          {
-            "criteriaId": "6",
-            "title": "Model Validation Criteria",
-            "description": "6.1. Validation of the AI model's performance and fairness on independent test datasets.\n6.2. Evidence of the model's ability to generalize well to unseen data while maintaining its fairness properties.\n6.3. Documentation of any discrepancies or limitations identified during the model validation process."
-          }
-        ]
-      },
-      {
-        "controlId": "AIDBA-5",
-        "title": "Deployment and Monitoring",
-        "description": "The organization shall ensure that the deployed AI system is continuously monitored for any emerging biases or fairness issues. The following measures shall be implemented:\n\na. Monitoring Plan: Establish a comprehensive monitoring plan that outlines the key metrics, data sources, and frequency of monitoring for the deployed AI system. The plan should cover both performance and fairness aspects of the system.\n\nb. Monitoring Mechanisms: Implement automated monitoring mechanisms to continuously collect and analyze data from the deployed AI system. These mechanisms should be designed to detect any deviations from the expected performance or fairness metrics.\n\nc. Fairness Drift Detection: Monitor for fairness drift, which refers to the gradual degradation of the AI system's fairness properties over time. Implement techniques to detect and quantify fairness drift, such as statistical tests or comparison with baseline fairness metrics.\n\nd. Bias Incident Response: Establish processes and protocols for promptly addressing any biases or fairness issues identified during monitoring. This includes conducting root cause analysis, developing mitigation strategies, and implementing necessary updates or adjustments to the AI system.\n\ne. Monitoring Reporting: Generate regular monitoring reports that provide insights into the AI system's performance and fairness metrics. These reports should be reviewed by relevant stakeholders and used to inform decision-making and continuous improvement efforts.\n\nf. Stakeholder Feedback: Establish channels for collecting and incorporating feedback from stakeholders, including users, customers, and impacted communities. Regularly solicit feedback on the AI system's fairness, transparency, and accountability, and use this feedback to guide monitoring and improvement efforts.",
-        "controlCategory": "Data Bias",
-        "readableControlId": "AIDBA-5",
-        "severity": "medium",
-        "automationPlatforms": [],
-        "criteria": [
-          {
-            "criteriaId": "1",
-            "title": "Monitoring Plan Criteria",
-            "description": "1.1. Documented monitoring plan that outlines the key metrics, data sources, and frequency of monitoring.\n1.2. Coverage of both performance and fairness aspects in the monitoring plan.\n1.3. Justification for the selected monitoring metrics and frequencies based on the specific requirements and context of the AI system."
-          },
-          {
-            "criteriaId": "2",
-            "title": "Monitoring Mechanisms Criteria",
-            "description": "2.1. Implementation of automated monitoring mechanisms to continuously collect and analyze data from the deployed AI system.\n2.2. Evidence of the effectiveness of the monitoring mechanisms in detecting deviations from expected performance or fairness metrics.\n2.3. Documentation of the monitoring data collected and the analysis performed."
-          },
-          {
-            "criteriaId": "3",
-            "title": "Fairness Drift Detection Criteria",
-            "description": "3.1. Implementation of techniques to detect and quantify fairness drift in the deployed AI system.\n3.2. Regular monitoring and assessment of fairness drift using appropriate statistical tests or comparison with baseline fairness metrics.\n3.3. Documentation of any identified instances of fairness drift and the actions taken to address them."
-          },
-          {
-            "criteriaId": "4",
-            "title": "Bias Incident Response Criteria",
-            "description": "4.1. Established processes and protocols for promptly addressing biases or fairness issues identified during monitoring.\n4.2. Evidence of conducting root cause analysis and developing mitigation strategies for identified bias incidents.\n4.3. Documentation of the actions taken to address bias incidents, including updates or adjustments made to the AI system."
-          },
-          {
-            "criteriaId": "5",
-            "title": "Monitoring Reporting Criteria",
-            "description": "5.1. Generation of regular monitoring reports that provide insights into the AI system's performance and fairness metrics.\n5.2. Distribution of monitoring reports to relevant stakeholders for review and decision-making.\n5.3. Evidence of using monitoring reports to inform continuous improvement efforts and guide necessary updates to the AI system."
-          },
-          {
-            "criteriaId": "6",
-            "title": "Stakeholder Feedback Criteria",
-            "description": "6.1. Establishment of channels for collecting and incorporating feedback from stakeholders, including users, customers, and impacted communities.\n6.2. Regular solicitation of feedback on the AI system's fairness, transparency, and accountability.\n6.3. Documentation of how stakeholder feedback is used to guide monitoring and improvement efforts."
-          }
-        ]
-      }
-    ]
+    {
+      "controlId": "AIDBA-1",
+      "title": "Data Bias Assessment and Mitigation",
+      "description": "The organization shall conduct comprehensive assessments to identify and mitigate potential biases in the data used to train AI systems. The following measures shall be implemented:\n\na. Bias Assessment Methodology: Establish a documented methodology for assessing biases in training data, including the specific types of biases to be evaluated (e.g., representational bias, sample bias, historical bias) and the techniques used to identify them (e.g., statistical analysis, fairness metrics).\n\nb. Bias Assessment Frequency: Conduct data bias assessments at regular intervals, such as prior to the initial use of the data for training, whenever significant changes are made to the data, and at least annually.\n\nc. Bias Assessment Reporting: Document the results of data bias assessments, including identified biases, their potential impact on AI system outcomes, and recommended mitigation strategies.\n\nd. Bias Mitigation Planning: Develop and maintain a bias mitigation plan that outlines the specific actions to be taken to address identified biases in the training data. This may include techniques such as data resampling, data augmentation, or the use of bias mitigation algorithms.\n\ne. Bias Mitigation Implementation: Implement the bias mitigation plan and document the actions taken to reduce or eliminate identified biases in the training data.\n\nf. Ongoing Monitoring: Establish processes for ongoing monitoring of AI system outcomes to detect and respond to any emergent biases that may arise over time.",
+      "controlCategory": "Data Bias",
+      "readableControlId": "AIDBA-1",
+      "severity": "medium",
+      "automationPlatforms": [],
+      "criteria": [
+        {
+          "criteriaId": "1",
+          "title": "Bias Assessment Methodology Criteria",
+          "description": "1.1. Documented methodology for assessing biases in training data.\n1.2. Identification of specific types of biases to be evaluated (e.g., representational bias, sample bias, historical bias).\n1.3. Description of techniques used to identify biases (e.g., statistical analysis, fairness metrics)."
+        },
+        {
+          "criteriaId": "2",
+          "title": "Bias Assessment Frequency Criteria",
+          "description": "2.1. Documented schedule for conducting data bias assessments.\n2.2. Evidence of bias assessments performed prior to initial data use, when significant changes are made, and at least annually."
+        },
+        {
+          "criteriaId": "3",
+          "title": "Bias Assessment Reporting Criteria",
+          "description": "3.1. Documented results of data bias assessments, including identified biases and their potential impact on AI system outcomes.\n3.2. Recommendations for bias mitigation strategies based on assessment findings."
+        },
+        {
+          "criteriaId": "4",
+          "title": "Bias Mitigation Planning Criteria",
+          "description": "4.1. Documented bias mitigation plan outlining specific actions to address identified biases.\n4.2. Inclusion of techniques such as data resampling, data augmentation, or bias mitigation algorithms in the mitigation plan."
+        },
+        {
+          "criteriaId": "5",
+          "title": "Bias Mitigation Implementation Criteria",
+          "description": "5.1. Evidence of the implementation of the bias mitigation plan.\n5.2. Documentation of actions taken to reduce or eliminate identified biases in the training data."
+        },
+        {
+          "criteriaId": "6",
+          "title": "Ongoing Monitoring Criteria",
+          "description": "6.1. Established processes for ongoing monitoring of AI system outcomes to detect emergent biases.\n6.2. Documentation of any biases identified through ongoing monitoring and actions taken to address them."
+        }
+      ]
+    },
+    {
+      "controlId": "AIDBA-2",
+      "title": "Data Collection and Preprocessing",
+      "description": "The organization shall ensure that data collection and preprocessing steps are designed to minimize the introduction of biases and ensure data quality. The following measures shall be implemented:\n\na. Data Source Selection: Identify and select diverse and representative data sources to reduce the risk of biases arising from limited or skewed data.\n\nb. Data Sampling Techniques: Employ appropriate data sampling techniques, such as stratified sampling or oversampling, to ensure balanced representation of different groups or classes in the training data.\n\nc. Data Quality Checks: Implement data quality checks to identify and address issues such as missing values, outliers, inconsistencies, and errors in the collected data.\n\nd. Data Preprocessing Guidelines: Establish and follow guidelines for data preprocessing tasks, including data cleaning, normalization, and feature selection, to maintain data integrity and reduce the introduction of biases.\n\ne. Data Labeling and Annotation: Ensure that data labeling and annotation processes are performed consistently and objectively, with clear guidelines and quality control measures to minimize the introduction of biases.\n\nf. Data Documentation: Maintain comprehensive documentation of data collection and preprocessing steps, including data sources, sampling methods, preprocessing techniques, and any assumptions made during the process.",
+      "controlCategory": "Data Bias",
+      "readableControlId": "AIDBA-2",
+      "severity": "medium",
+      "automationPlatforms": [],
+      "criteria": [
+        {
+          "criteriaId": "1",
+          "title": "Data Source Selection Criteria",
+          "description": "1.1. Identification and selection of diverse and representative data sources.\n1.2. Documentation of the rationale for data source selection.\n1.3. Evidence of efforts to mitigate biases arising from limited or skewed data sources."
+        },
+        {
+          "criteriaId": "2",
+          "title": "Data Sampling Techniques Criteria",
+          "description": "2.1. Documented data sampling techniques used to ensure balanced representation.\n2.2. Justification for the selected sampling techniques based on data characteristics and bias mitigation goals.\n2.3. Evidence of the application of appropriate sampling techniques during data collection and preprocessing."
+        },
+        {
+          "criteriaId": "3",
+          "title": "Data Quality Checks Criteria",
+          "description": "3.1. Documented processes for performing data quality checks.\n3.2. Identification of specific data quality issues to be addressed (e.g., missing values, outliers, inconsistencies).\n3.3. Evidence of the execution of data quality checks and the resolution of identified issues."
+        },
+        {
+          "criteriaId": "4",
+          "title": "Data Preprocessing Guidelines Criteria",
+          "description": "4.1. Established guidelines for data preprocessing tasks, including data cleaning, normalization, and feature selection.\n4.2. Documentation of the rationale behind the preprocessing guidelines.\n4.3. Evidence of adherence to the preprocessing guidelines during the data preparation process."
+        },
+        {
+          "criteriaId": "5",
+          "title": "Data Labeling and Annotation Criteria",
+          "description": "5.1. Documented guidelines for consistent and objective data labeling and annotation.\n5.2. Quality control measures to ensure the accuracy and consistency of labeled and annotated data.\n5.3. Evidence of the application of the labeling and annotation guidelines during the data preparation process."
+        },
+        {
+          "criteriaId": "6",
+          "title": "Data Documentation Criteria",
+          "description": "6.1. Comprehensive documentation of data collection and preprocessing steps.\n6.2. Inclusion of information on data sources, sampling methods, preprocessing techniques, and assumptions made.\n6.3. Regular updates to the documentation to reflect any changes in the data collection and preprocessing processes."
+        }
+      ]
+    },
+    {
+      "controlId": "AIDBA-3",
+      "title": "Model Development and Training",
+      "description": "The organization shall ensure that the model development and training phase incorporates measures to mitigate biases and promote fairness. The following measures shall be implemented:\n\na. Algorithm Selection: Select appropriate algorithms that are less prone to amplifying biases present in the training data. Consider the use of fairness-aware algorithms or algorithms with built-in bias mitigation techniques.\n\nb. Hyperparameter Tuning: Conduct thorough hyperparameter tuning to optimize model performance while considering fairness metrics. Evaluate the impact of different hyperparameter settings on bias mitigation.\n\nc. Bias Mitigation Techniques: Incorporate bias mitigation techniques during model training, such as regularization, adversarial debiasing, or fairness constraints. Document the specific techniques applied and their effectiveness in reducing biases.\n\nd. Training Data Balancing: Ensure that the training data is balanced and representative of the target population. Apply techniques like resampling, oversampling, or undersampling to address class imbalances that may contribute to biases.\n\ne. Fairness Metrics: Incorporate fairness metrics during model training and validation to assess the model's performance in terms of fairness and bias mitigation. Use appropriate fairness metrics based on the specific context and requirements of the AI system.\n\nf. Model Transparency: Maintain transparency in the model development process by documenting the algorithms used, hyperparameter settings, bias mitigation techniques applied, and any assumptions made during training.",
+      "controlCategory": "Data Bias",
+      "readableControlId": "AIDBA-3",
+      "severity": "medium",
+      "automationPlatforms": [],
+      "criteria": [
+        {
+          "criteriaId": "1",
+          "title": "Algorithm Selection Criteria",
+          "description": "1.1. Documentation of the rationale for selecting specific algorithms, considering their potential impact on bias mitigation.\n1.2. Evidence of the use of fairness-aware algorithms or algorithms with built-in bias mitigation techniques, where applicable.\n1.3. Justification for the chosen algorithms based on their suitability for the specific AI system and bias mitigation requirements."
+        },
+        {
+          "criteriaId": "2",
+          "title": "Hyperparameter Tuning Criteria",
+          "description": "2.1. Documentation of the hyperparameter tuning process, including the range of hyperparameters explored and the evaluation metrics used.\n2.2. Evidence of considering fairness metrics during hyperparameter tuning.\n2.3. Analysis of the impact of different hyperparameter settings on bias mitigation and model performance."
+        },
+        {
+          "criteriaId": "3",
+          "title": "Bias Mitigation Techniques Criteria",
+          "description": "3.1. Documentation of the specific bias mitigation techniques applied during model training.\n3.2. Evaluation of the effectiveness of the applied bias mitigation techniques using appropriate fairness metrics.\n3.3. Justification for the selection of specific bias mitigation techniques based on their suitability for the AI system and the types of biases being addressed."
+        },
+        {
+          "criteriaId": "4",
+          "title": "Training Data Balancing Criteria",
+          "description": "4.1. Documentation of the techniques used to balance the training data, such as resampling, oversampling, or undersampling.\n4.2. Analysis of the impact of data balancing techniques on model performance and bias mitigation.\n4.3. Evidence of efforts to ensure that the training data is representative of the target population."
+        },
+        {
+          "criteriaId": "5",
+          "title": "Fairness Metrics Criteria",
+          "description": "5.1. Identification of appropriate fairness metrics based on the specific context and requirements of the AI system.\n5.2. Documentation of the fairness metrics used during model training and validation.\n5.3. Evaluation of the model's performance in terms of fairness and bias mitigation using the selected fairness metrics."
+        },
+        {
+          "criteriaId": "6",
+          "title": "Model Transparency Criteria",
+          "description": "6.1. Comprehensive documentation of the model development process, including algorithms used, hyperparameter settings, and bias mitigation techniques applied.\n6.2. Clear documentation of any assumptions made during model training.\n6.3. Availability of model documentation to relevant stakeholders for transparency and accountability."
+        }
+      ]
+    },
+    {
+      "controlId": "AIDBA-4",
+      "title": "Model Evaluation and Testing",
+      "description": "The organization shall conduct comprehensive evaluations and testing of trained AI models to assess their performance, fairness, and the presence of any residual biases. The following measures shall be implemented:\n\na. Evaluation Metrics Selection: Select appropriate evaluation metrics that cover both performance and fairness aspects of the AI model. Include metrics such as accuracy, precision, recall, F1-score, as well as fairness metrics like demographic parity, equalized odds, or equal opportunity.\n\nb. Testing Methodology: Establish a robust testing methodology that includes techniques such as cross-validation, holdout validation, or stratified sampling to assess the model's performance and fairness across different subsets of the data.\n\nc. Bias Testing: Conduct targeted bias testing to evaluate the model's performance across different protected attributes or sensitive groups. Assess the model's fairness and identify any disparities in outcomes or error rates across these groups.\n\nd. Threshold Analysis: Perform threshold analysis to determine the appropriate decision thresholds for the AI model, considering both performance and fairness metrics. Evaluate the impact of different threshold settings on the model's fairness and accuracy.\n\ne. Residual Bias Assessment: Assess the presence of any residual biases in the trained model that may not have been fully mitigated during the training phase. Identify the sources and magnitude of these biases and develop strategies for further mitigation.\n\nf. Model Validation: Validate the AI model's performance and fairness on independent test datasets that were not used during training. Ensure that the model generalizes well to unseen data and maintains its fairness properties.",
+      "controlCategory": "Data Bias",
+      "readableControlId": "AIDBA-4",
+      "severity": "medium",
+      "automationPlatforms": [],
+      "criteria": [
+        {
+          "criteriaId": "1",
+          "title": "Evaluation Metrics Selection Criteria",
+          "description": "1.1. Documentation of the selected evaluation metrics, including both performance and fairness metrics.\n1.2. Justification for the choice of evaluation metrics based on the specific requirements and context of the AI system.\n1.3. Evidence of the use of appropriate fairness metrics, such as demographic parity, equalized odds, or equal opportunity."
+        },
+        {
+          "criteriaId": "2",
+          "title": "Testing Methodology Criteria",
+          "description": "2.1. Documented testing methodology, including techniques such as cross-validation, holdout validation, or stratified sampling.\n2.2. Evidence of the application of the testing methodology to assess the model's performance and fairness across different data subsets.\n2.3. Analysis of the results obtained from the testing methodology, including performance and fairness metrics."
+        },
+        {
+          "criteriaId": "3",
+          "title": "Bias Testing Criteria",
+          "description": "3.1. Documentation of the targeted bias testing conducted, including the protected attributes or sensitive groups considered.\n3.2. Evaluation of the model's fairness and identification of any disparities in outcomes or error rates across different groups.\n3.3. Evidence of the use of appropriate fairness metrics during bias testing."
+        },
+        {
+          "criteriaId": "4",
+          "title": "Threshold Analysis Criteria",
+          "description": "4.1. Documentation of the threshold analysis performed, including the range of threshold values considered.\n4.2. Evaluation of the impact of different threshold settings on the model's fairness and accuracy.\n4.3. Justification for the selected decision thresholds based on the balance between performance and fairness requirements."
+        },
+        {
+          "criteriaId": "5",
+          "title": "Residual Bias Assessment Criteria",
+          "description": "5.1. Assessment of the presence of any residual biases in the trained model.\n5.2. Identification of the sources and magnitude of residual biases.\n5.3. Development of strategies and action plans for further bias mitigation based on the residual bias assessment findings."
+        },
+        {
+          "criteriaId": "6",
+          "title": "Model Validation Criteria",
+          "description": "6.1. Validation of the AI model's performance and fairness on independent test datasets.\n6.2. Evidence of the model's ability to generalize well to unseen data while maintaining its fairness properties.\n6.3. Documentation of any discrepancies or limitations identified during the model validation process."
+        }
+      ]
+    },
+    {
+      "controlId": "AIDBA-5",
+      "title": "Deployment and Monitoring",
+      "description": "The organization shall ensure that the deployed AI system is continuously monitored for any emerging biases or fairness issues. The following measures shall be implemented:\n\na. Monitoring Plan: Establish a comprehensive monitoring plan that outlines the key metrics, data sources, and frequency of monitoring for the deployed AI system. The plan should cover both performance and fairness aspects of the system.\n\nb. Monitoring Mechanisms: Implement automated monitoring mechanisms to continuously collect and analyze data from the deployed AI system. These mechanisms should be designed to detect any deviations from the expected performance or fairness metrics.\n\nc. Fairness Drift Detection: Monitor for fairness drift, which refers to the gradual degradation of the AI system's fairness properties over time. Implement techniques to detect and quantify fairness drift, such as statistical tests or comparison with baseline fairness metrics.\n\nd. Bias Incident Response: Establish processes and protocols for promptly addressing any biases or fairness issues identified during monitoring. This includes conducting root cause analysis, developing mitigation strategies, and implementing necessary updates or adjustments to the AI system.\n\ne. Monitoring Reporting: Generate regular monitoring reports that provide insights into the AI system's performance and fairness metrics. These reports should be reviewed by relevant stakeholders and used to inform decision-making and continuous improvement efforts.\n\nf. Stakeholder Feedback: Establish channels for collecting and incorporating feedback from stakeholders, including users, customers, and impacted communities. Regularly solicit feedback on the AI system's fairness, transparency, and accountability, and use this feedback to guide monitoring and improvement efforts.",
+      "controlCategory": "Data Bias",
+      "readableControlId": "AIDBA-5",
+      "severity": "medium",
+      "automationPlatforms": [],
+      "criteria": [
+        {
+          "criteriaId": "1",
+          "title": "Monitoring Plan Criteria",
+          "description": "1.1. Documented monitoring plan that outlines the key metrics, data sources, and frequency of monitoring.\n1.2. Coverage of both performance and fairness aspects in the monitoring plan.\n1.3. Justification for the selected monitoring metrics and frequencies based on the specific requirements and context of the AI system."
+        },
+        {
+          "criteriaId": "2",
+          "title": "Monitoring Mechanisms Criteria",
+          "description": "2.1. Implementation of automated monitoring mechanisms to continuously collect and analyze data from the deployed AI system.\n2.2. Evidence of the effectiveness of the monitoring mechanisms in detecting deviations from expected performance or fairness metrics.\n2.3. Documentation of the monitoring data collected and the analysis performed."
+        },
+        {
+          "criteriaId": "3",
+          "title": "Fairness Drift Detection Criteria",
+          "description": "3.1. Implementation of techniques to detect and quantify fairness drift in the deployed AI system.\n3.2. Regular monitoring and assessment of fairness drift using appropriate statistical tests or comparison with baseline fairness metrics.\n3.3. Documentation of any identified instances of fairness drift and the actions taken to address them."
+        },
+        {
+          "criteriaId": "4",
+          "title": "Bias Incident Response Criteria",
+          "description": "4.1. Established processes and protocols for promptly addressing biases or fairness issues identified during monitoring.\n4.2. Evidence of conducting root cause analysis and developing mitigation strategies for identified bias incidents.\n4.3. Documentation of the actions taken to address bias incidents, including updates or adjustments made to the AI system."
+        },
+        {
+          "criteriaId": "5",
+          "title": "Monitoring Reporting Criteria",
+          "description": "5.1. Generation of regular monitoring reports that provide insights into the AI system's performance and fairness metrics.\n5.2. Distribution of monitoring reports to relevant stakeholders for review and decision-making.\n5.3. Evidence of using monitoring reports to inform continuous improvement efforts and guide necessary updates to the AI system."
+        },
+        {
+          "criteriaId": "6",
+          "title": "Stakeholder Feedback Criteria",
+          "description": "6.1. Establishment of channels for collecting and incorporating feedback from stakeholders, including users, customers, and impacted communities.\n6.2. Regular solicitation of feedback on the AI system's fairness, transparency, and accountability.\n6.3. Documentation of how stakeholder feedback is used to guide monitoring and improvement efforts."
+        }
+      ]
+    }
   ]
 }
