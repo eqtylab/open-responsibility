@@ -13,7 +13,7 @@
                 "riskId": "1.1",
                 "title": "Biased Data Sources",
                 "definition": "The selected data sources may contain inherent biases or lack diversity, leading to biased AI models.",
-                "addressedByControls": ["AI-DBA-2"]
+                "addressedByControls": ["AIDBA-2"]
               }
             ]
           },
@@ -24,7 +24,7 @@
                 "riskId": "1.2",
                 "title": "Preprocessing-Induced Bias",
                 "definition": "Data preprocessing techniques, such as feature selection or data cleaning, may introduce or amplify biases in the data.",
-                "addressedByControls": ["AI-DBA-2"]
+                "addressedByControls": ["AIDBA-2"]
               }
             ]
           },
@@ -35,7 +35,7 @@
                 "riskId": "1.3",
                 "title": "Inadequate Bias Assessment",
                 "definition": "Failure to conduct comprehensive assessments to identify potential biases in the training data may result in biased AI models.",
-                "addressedByControls": ["AI-DBA-1"]
+                "addressedByControls": ["AIDBA-1"]
               }
             ]
           }
@@ -51,7 +51,7 @@
                 "riskId": "2.1",
                 "title": "Algorithmic Bias",
                 "definition": "The chosen algorithms may have inherent biases or may amplify biases present in the training data.",
-                "addressedByControls": ["AI-DBA-3"]
+                "addressedByControls": ["AIDBA-3"]
               }
             ]
           },
@@ -62,7 +62,7 @@
                 "riskId": "2.2",
                 "title": "Training Data Bias",
                 "definition": "The training data used to develop the AI model may contain biases, leading to biased model outputs.",
-                "addressedByControls": ["AI-DBA-3"]
+                "addressedByControls": ["AIDBA-3"]
               }
             ]
           }
@@ -78,7 +78,7 @@
                 "riskId": "3.1",
                 "title": "Inadequate Performance Metrics",
                 "definition": "The selected performance metrics may not adequately capture the fairness and bias aspects of the AI model.",
-                "addressedByControls": ["AI-DBA-4"]
+                "addressedByControls": ["AIDBA-4"]
               }
             ]
           },
@@ -89,7 +89,7 @@
                 "riskId": "3.2",
                 "title": "Undetected Residual Bias",
                 "definition": "The testing process may fail to identify and quantify residual biases present in the trained AI model.",
-                "addressedByControls": ["AI-DBA-4"]
+                "addressedByControls": ["AIDBA-4"]
               }
             ]
           }
@@ -105,7 +105,7 @@
                 "riskId": "4.1",
                 "title": "Fairness Drift",
                 "definition": "The fairness properties of the AI model may degrade over time due to changes in the underlying data or environment.",
-                "addressedByControls": ["AI-DBA-5"]
+                "addressedByControls": ["AIDBA-5"]
               }
             ]
           },
@@ -116,7 +116,7 @@
                 "riskId": "4.2",
                 "title": "Insufficient Monitoring",
                 "definition": "The monitoring processes may not effectively detect emerging biases or fairness issues in the deployed AI system.",
-                "addressedByControls": ["AI-DBA-5"]
+                "addressedByControls": ["AIDBA-5"]
               }
             ]
           }
