@@ -1,5 +1,6 @@
 {
-  "name": "AI Bias Assessment and Mitigation Framework",
+  "name": "AI Development Bias Assessment (AIDBA)",
+  "shortName": "AIDBA",
   "description": "A framework for assessing and mitigating bias in AI systems throughout the development lifecycle.",
   "stages": [
     {
