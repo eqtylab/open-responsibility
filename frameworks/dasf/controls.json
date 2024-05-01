@@ -6,7 +6,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 1",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-2",
@@ -15,7 +15,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 2",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-3",
@@ -24,7 +24,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 3",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-4",
@@ -33,7 +33,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 4",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-5",
@@ -42,7 +42,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 5",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-6",
@@ -51,7 +51,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 6",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-7",
@@ -60,7 +60,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 7",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-8",
@@ -69,7 +69,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 8",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-9",
@@ -78,7 +78,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 9",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-10",
@@ -87,7 +87,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 10",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-11",
@@ -96,7 +96,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 11",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-12",
@@ -105,7 +105,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 12",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-13",
@@ -114,7 +114,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 13",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-14",
@@ -123,7 +123,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 14",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-15",
@@ -132,7 +132,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 15",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-16",
@@ -141,7 +141,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 16",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-17",
@@ -150,7 +150,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 17",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-18",
@@ -159,7 +159,7 @@
     "controlCategory": "Configuration",
     "readableControlId": "DASF 18",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-19",
@@ -168,7 +168,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 19",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-20",
@@ -177,7 +177,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 20",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-21",
@@ -186,7 +186,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 21",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-22",
@@ -195,7 +195,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 22",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-23",
@@ -204,7 +204,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 23",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-24",
@@ -213,7 +213,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 24",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-25",
@@ -222,7 +222,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 25",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-26",
@@ -231,7 +231,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 26",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-27",
@@ -240,7 +240,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 27",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-28",
@@ -249,7 +249,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 28",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-29",
@@ -258,7 +258,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 29",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-30",
@@ -267,7 +267,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 30",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-31",
@@ -276,7 +276,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 31",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-32",
@@ -285,7 +285,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 32",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-33",
@@ -294,7 +294,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 33",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-34",
@@ -303,7 +303,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 34",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-35",
@@ -312,7 +312,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 35",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-36",
@@ -321,7 +321,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 36",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-37",
@@ -330,7 +330,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 37",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-38",
@@ -339,7 +339,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 38",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-39",
@@ -348,7 +348,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 39",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-40",
@@ -357,7 +357,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 40",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-41",
@@ -366,7 +366,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 41",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-42",
@@ -375,7 +375,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 42",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-43",
@@ -384,7 +384,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 43",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-44",
@@ -393,7 +393,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 44",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-45",
@@ -402,7 +402,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 45",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-46",
@@ -411,7 +411,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 46",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-47",
@@ -420,7 +420,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 47",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-48",
@@ -429,7 +429,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 48",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-49",
@@ -438,7 +438,7 @@
     "controlCategory": "Implementation",
     "readableControlId": "DASF 49",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-50",
@@ -447,7 +447,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 50",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-51",
@@ -456,7 +456,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 51",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-52",
@@ -465,7 +465,7 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 52",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   },
   {
     "controlId": "DASF-53",
@@ -474,6 +474,6 @@
     "controlCategory": "Out-of-the-box",
     "readableControlId": "DASF 53",
     "severity": "medium",
-    "automationPlatforms": ["Azure/Databricks"]
+    "automationPlatforms": ["AzureDatabricks"]
   }
 ]
