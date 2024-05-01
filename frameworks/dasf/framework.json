@@ -661,7 +661,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 1",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -671,7 +671,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 2",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -681,7 +681,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 3",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -691,7 +691,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 4",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -701,7 +701,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 5",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -711,7 +711,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 6",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -721,7 +721,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 7",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -731,7 +731,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 8",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -741,7 +741,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 9",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -751,7 +751,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 10",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -761,7 +761,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 11",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -771,7 +771,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 12",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -781,7 +781,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 13",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -791,7 +791,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 14",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -801,7 +801,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 15",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -811,7 +811,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 16",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -821,7 +821,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 17",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -831,7 +831,7 @@
       "controlCategory": "Configuration",
       "readableControlId": "DASF 18",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -841,7 +841,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 19",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -851,7 +851,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 20",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -861,7 +861,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 21",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -871,7 +871,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 22",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -881,7 +881,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 23",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -891,7 +891,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 24",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -901,7 +901,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 25",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -911,7 +911,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 26",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -921,7 +921,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 27",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -931,7 +931,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 28",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -941,7 +941,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 29",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -951,7 +951,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 30",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -961,7 +961,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 31",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -971,7 +971,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 32",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -981,7 +981,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 33",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -991,7 +991,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 34",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1001,7 +1001,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 35",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1011,7 +1011,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 36",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1021,7 +1021,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 37",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1031,7 +1031,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 38",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1041,7 +1041,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 39",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1051,7 +1051,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 40",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1061,7 +1061,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 41",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1071,7 +1071,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 42",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1081,7 +1081,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 43",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1091,7 +1091,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 44",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1101,7 +1101,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 45",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1111,7 +1111,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 46",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1121,7 +1121,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 47",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1131,7 +1131,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 48",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1141,7 +1141,7 @@
       "controlCategory": "Implementation",
       "readableControlId": "DASF 49",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1151,7 +1151,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 50",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1161,7 +1161,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 51",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1171,7 +1171,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 52",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     },
     {
@@ -1181,7 +1181,7 @@
       "controlCategory": "Out-of-the-box",
       "readableControlId": "DASF 53",
       "severity": "medium",
-      "automationPlatforms": [],
+      "automationPlatforms": ["AZURE_DATABRICKS"],
       "criteria": []
     }
   ]
